@@ -1,11 +1,18 @@
 import autogen
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+
 
 def get_llm_config():
+    model_name = os.getenv("MODEL_NAME", "qwen2.5:latest")
     config_list = autogen.config_list_from_json(
         env_or_file="OAI_CONFIG_LIST",
         file_location=".",
-        filter_dict={"model": ["qwen2.5-72b"]}     # qwen2.5:72b-instruct
+        filter_dict={"model": [model_name]}
     )
 
     llm_config = {

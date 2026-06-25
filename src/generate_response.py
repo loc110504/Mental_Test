@@ -4,9 +4,13 @@ import os
 import sys
 import contextlib
 import logging
+from pathlib import Path
 import pandas as pd
+from dotenv import load_dotenv
 from data_load import load_scoring_standards
 from logging_setup import dialog_print
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 logger = logging.getLogger(__name__)
 base_url = os.getenv("API_BASE_URL", "https://api.deepseek.ai/v1")
