@@ -262,4 +262,4 @@ def process_single_file(file_path, scoring_standards, chatprompt, selected_scale
 
     except Exception as e:
         logger.exception(f"Error processing file {file_path}: {e}")
-        dialog_print(f"Error processing file {file_path}; check logs for details.")
+        dialog_print(f"Error processing file {file_path}: {type(e).__name__}: {e}")

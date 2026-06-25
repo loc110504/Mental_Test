@@ -1,0 +1,8 @@
+Found 1 JSON files in folder /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/389.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Error processing file /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/389.json: TypeError: Object of type set is not JSON serializable

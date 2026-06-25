@@ -11,8 +11,8 @@ from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df_real = pd.read_csv('')
-df_pred = pd.read_csv('')
+df_real = pd.read_csv('data/dev_split_Depression_AVEC2017.csv')
+df_pred = pd.read_csv('evaluation/llama-33-70b-instruct.csv')
 
 df_real = df_real.rename(columns={
     'Participant_ID': 'identifier',

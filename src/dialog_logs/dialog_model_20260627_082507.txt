@@ -1,0 +1,28 @@
+Found 1 JSON files in folder /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/389.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:unknown, gender:unknown, occupation:music
+
+Basic information: Age: unknown, Gender: unknown, Occupation: music
+
+
+--------------------Current Topic: Loss of Interest
+Question: Over the past two weeks, how often have you felt little interest or pleasure in doing things?
+
+Simulated answer: I feel little interest or pleasure in doing things a little bit.
+Question: How has feeling little interest or pleasure in doing things affected your daily life over the past two weeks?
+
+Simulated answer: Feeling little interest or pleasure in doing things has affected my daily life in that I haven't been able to enjoy music as much as I used to, which is a big part of my life. I could spend twelve hours a day working on music, but lately, it hasn't been the same.
+Question: Over the past two weeks, how many days have you felt little interest or pleasure in doing things?
+
+Simulated answer: I feel little interest or pleasure in doing things a little bit, but I'm not sure how many days exactly.
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things for more than half of the days?
+
+Simulated answer: I feel little interest or pleasure in doing things a little bit, but I'm not sure how many days exactly.
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things for nearly every day?
+
+Simulated answer: I feel little interest or pleasure in doing things a little bit, but I'm not sure how many days exactly.

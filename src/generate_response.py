@@ -4,7 +4,7 @@ import sys
 import contextlib
 import logging
 import pandas as pd
-from config import get_api_runtime_config
+from config import get_api_runtime_config, wait_for_rate_limit
 from data_load import load_scoring_standards
 from logging_setup import dialog_print
 
@@ -48,6 +48,7 @@ Limit your response to 50 words.
 
     try:
         from openai import OpenAI
+        wait_for_rate_limit()
         client = OpenAI(
             base_url=runtime_config["base_url"],
             api_key=runtime_config["api_key"]

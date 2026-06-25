@@ -1,0 +1,29 @@
+Found 35 JSON files in folder ../data/processed_dev_daic_woz.
+You selected scale: PHQ-8
+
+==================================================
+Starting to process file: ../data/processed_dev_daic_woz/302.json
+==================================================
+
+
+Conversation memory cleared; ready to process current file.
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:32, gender:female, occupation:early childhood education student
+
+
+--------------------Current Topic: Loss of Interest
+Question: Next speaker: QuestionAgent
+Type: initial
+Topic: Loss of Interest
+Identification: Age: 32, Gender: female, Occupation: early childhood education student
+Last Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Last Response: age:32, gender:female, occupation:early childhood education student
+Memory: {
+  "long_term_memory": [],
+  "short_term_memory": []
+}
+Other Topics: Depressed Mood, Sleep Problems, Fatigue or Low Energy, Appetite or Weight Changes, Low Self-Worth, Concentration Difficulties, Psychomotor Changes
+
+Simulated answer: I'm ready. I'm 32, female, and studying early childhood education. I've been feeling down since my mom passed five years ago, and my job situation is unstable. I sometimes feel like I'm just going through the motions, even though I love kids. Let's talk about what's on my mind.
+Necessity score == 2, continue in-depth questioning.

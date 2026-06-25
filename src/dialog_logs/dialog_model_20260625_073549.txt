@@ -1,0 +1,38 @@
+Found 35 JSON files in folder ../data/processed_dev_daic_woz.
+You selected scale: PHQ-8
+
+==================================================
+Starting to process file: ../data/processed_dev_daic_woz/302.json
+==================================================
+
+
+Conversation memory cleared; ready to process current file.
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:35, gender:female, occupation:early childhood educator
+
+
+--------------------Current Topic: Loss of Interest
+Question: <empathetic feedback based on last response> It's great that you're willing to share your basic information with me. This will help me tailor our conversation to your specific needs.
+
+<generated question> As an early childhood educator, you likely have a lot of responsibilities and tasks to manage. Can you tell me about a particular activity or hobby that you used to enjoy, but haven't been able to find pleasure in lately?
+
+Simulated answer: I used to enjoy playing music and singing, but since my mom passed away, I haven't been able to find the same joy in it. It's hard for me to think about happy times without feeling a pang of sadness.
+Necessity score == 2, continue in-depth questioning.
+Question: <empathetic feedback based on last response> It's understandable that you're struggling to find joy in activities that you used to enjoy since your mom passed away. It's a normal part of the grieving process.
+
+<generated question> You mentioned that it's hard for you to think about happy times without feeling a pang of sadness. Can you tell me more about what happens when you try to think about happy memories of your mom? Do you feel a strong emotional response, or is it more of a subtle feeling?
+
+Simulated answer: When I try to think about happy memories of my mom, I feel a strong emotional response, like a knot in my stomach. It's a mix of sadness and longing, and it can be overwhelming. It's like a wave of grief washes over me, making it hard to focus on the happy times.
+Necessity score == 2, continue in-depth questioning.
+Question: <empathetic feedback based on last response> It sounds like thinking about happy memories of your mom can be a really challenging and emotional experience for you. It's like a wave of grief washes over you, making it hard to focus on the happy times.
+
+<generated question> Have you noticed any patterns or triggers that make you feel this way when thinking about happy memories of your mom? For example, is it certain times of day, certain places, or certain people that bring up these feelings?
+
+Simulated answer: I've noticed that thinking about happy memories of my mom can be triggered by certain things, like driving by a particular restaurant she liked or watching TV shows we used to watch together. It's like these small reminders bring up a flood of emotions, making it hard to focus on the happy times.
+Necessity score == 2, continue in-depth questioning.
+
+Total score for topic 'Loss of Interest': 0 points
+
+
+--------------------Current Topic: Depressed Mood

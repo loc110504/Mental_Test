@@ -1,0 +1,54 @@
+Found 1 JSON files in folder /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/389.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:unknown, gender:unknown, occupation:unknown
+
+Basic information: Age: unknown, Gender: unknown, Occupation: unknown
+
+
+--------------------Current Topic: Loss of Interest
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things?
+
+Simulated answer: Uh, a little bit
+Question: Can you tell me more about what you mean by 'a little bit' when it comes to feeling little interest or pleasure in doing things over the past two weeks?
+
+Simulated answer: To be honest, I'm not really sure how to quantify 'a little bit' in this context. I mean, I've been able to spend a lot of time working on music and training, which is something I usually enjoy, but at the same time, I've been feeling kind of useless lately. I don't know if that's related to a lack of interest or pleasure in doing things, but it's definitely been on my mind.
+Question: Over the past two weeks, how many days have you felt little interest or pleasure in doing things?
+
+Simulated answer: I'm not really sure, I've felt it a little bit, but I don't know how many days exactly.
+Question: You mentioned being able to spend a lot of time working on music and training, but also feeling useless lately. Can you tell me more about what specifically makes you feel useless in those situations?
+
+Simulated answer: Honestly, I'm not entirely sure what makes me feel useless in those situations. I've been able to spend a lot of time on music and training, which I usually enjoy, but lately, it just doesn't feel as fulfilling. I don't know if it's because I'm not seeing the progress I want or if it's something else entirely. I just know that even when I'm doing things I'm supposed to like, I feel kind of useless.
+
+Total score for topic 'Loss of Interest': 1 points
+Scoring basis: The user reports a little bit of loss of interest and uncertainty about the frequency of their loss of interest, but is still able to engage in enjoyable activities.
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: To be honest, I'm not really sure. I mean, I have been feeling kind of useless lately, like same shit now just feeling kind of useless, but I don't know if that's exactly the same as feeling down, depressed, or hopeless. I haven't really thought about it that way.
+Question: Over the past two weeks, have you experienced persistent sadness?
+
+Simulated answer: I'm not really sure, but like I mentioned before, I have been feeling kind of useless lately. That's about all I can say about my feelings over the past two weeks.
+Question: Over the past two weeks, have you struggled to feel optimistic or upbeat?
+
+Simulated answer: Honestly, I'm not really sure. I mean, I've been feeling kind of useless lately, but I don't know if that's the same as struggling to feel optimistic or upbeat. I just know I've been feeling that way, but I haven't really thought about it in terms of optimism or being upbeat.
+
+Total score for topic 'Depressed Mood': 1 points
+Scoring basis: The user reports feeling useless lately, but the frequency and severity of their depressed mood are unclear.
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: I mean, I never really sleep well, so I don't really know if it's been worse over the past two weeks. But I do know that I have trouble sleeping in general.
+Question: Over the past two weeks, have you felt that your sleep was restless or of poor quality?
+
+Simulated answer: I'm not really sure, I do know I have trouble sleeping in general, but I don't have any specific information about the quality of my sleep over the past two weeks.

@@ -7,32 +7,28 @@ import logging
 import pandas as pd
 from data_load import load_scoring_standards
 from logging_setup import dialog_print
-from config import get_llm_config, wait_for_rate_limit
+from config import get_llm_config
 from autogen.token_count_utils import count_token
 
 logger = logging.getLogger(__name__)
-llm_config = get_llm_config()
 
 
-def _coerce_score_value(score, min_score, max_score, context):
+def safe_count_token(content):
     try:
-        numeric_score = int(score)
-    except (TypeError, ValueError):
-        logger.warning("Invalid %s score value: %r", context, score)
-        return min_score
-
-    if numeric_score < min_score or numeric_score > max_score:
-        clamped_score = max(min_score, min(max_score, numeric_score))
-        logger.warning(
-            "%s score %r is outside [%s, %s]; clamped to %s.",
-            context,
-            numeric_score,
-            min_score,
-            max_score,
-            clamped_score,
-        )
-        return clamped_score
-    return numeric_score
+        return count_token(content)
+    except Exception as exc:
+        logger.warning("Falling back to approximate token count: %s", exc)
+        if isinstance(content, str):
+            return max(1, len(content) // 4)
+        if isinstance(content, list):
+            total_chars = 0
+            for item in content:
+                if isinstance(item, dict):
+                    total_chars += len(str(item.get("content", "")))
+                else:
+                    total_chars += len(str(item))
+            return max(1, total_chars // 4)
+        return max(1, len(str(content)) // 4)
 
 
 def parse_personal_info(response):
@@ -129,6 +125,32 @@ def extract_score(text):
         return 0
 
 
+def extract_json_object(text, default=None):
+    if default is None:
+        default = {}
+    if not text:
+        return default
+
+    cleaned = text.strip()
+    if cleaned.startswith("```json"):
+        cleaned = cleaned[len("```json"):].strip()
+    elif cleaned.startswith("```"):
+        cleaned = cleaned[len("```"):].strip()
+    if cleaned.endswith("```"):
+        cleaned = cleaned[:-len("```")].strip()
+
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        match = re.search(r"\{.*\}", cleaned, re.DOTALL)
+        if not match:
+            return default
+        try:
+            return json.loads(match.group(0))
+        except json.JSONDecodeError:
+            return default
+
+
 def extract_score_and_summary(text, scale_name):
     try:
         if text.startswith("```json"):
@@ -143,7 +165,11 @@ def extract_score_and_summary(text, scale_name):
         summary = data.get("summary", "")
 
         max_score = 3 if scale_name == "PHQ-8" else 4
-        return _coerce_score_value(score, 0, max_score, "Topic"), summary
+        if isinstance(score, int) and 0 <= score <= max_score:
+            return score, summary
+        else:
+            print("Score is out of valid range; defaulting to 0.")
+            return 0, summary
     except json.JSONDecodeError:
         print("Unable to parse the scoring agent's output. Please ensure it follows JSON format.")
         return 0, ""
@@ -169,10 +195,10 @@ def extract_summary_and_updated_scores(text, scale_name):
             if isinstance(score_data, dict):
                 score = score_data.get("score")
                 reason = score_data.get("reason", "")
-                valid_updated_scores[topic] = {
-                    "score": _coerce_score_value(score, 0, max_score, f"Updated topic '{topic}'"),
-                    "reason": reason,
-                }
+                if isinstance(score, int) and 0 <= score <= max_score:
+                    valid_updated_scores[topic] = {"score": score, "reason": reason}
+                else:
+                    print(f"Invalid updated score: topic='{topic}', score='{score}'")
             else:
                 print(f"Invalid format in updated_scores: topic='{topic}', data='{score_data}'")
 
@@ -211,11 +237,7 @@ def generate_score_table(memory_graph, topics, symptom_level):
     df.loc[len(df.index)] = ["", "Total Score", "", total_score]
     df.loc[len(df.index)] = ["", "Symptom Level", "", symptom_level]
 
-    try:
-        return df.to_markdown(index=False)
-    except Exception as exc:
-        logger.warning("Falling back to plain-text score table because markdown rendering failed: %s", exc)
-        return df.to_string(index=False)
+    return df.to_markdown(index=False)
 
 def generate_report(report_table, summary, scale_name):
     report = f"# Psychological Scale Assessment Report\n\n"
@@ -229,23 +251,13 @@ def generate_report(report_table, summary, scale_name):
 
 def custom_speaker_selection_func(last_speaker, groupchat):
     messages = groupchat.messages
-    if not messages:
-        logger.warning("Speaker selection invoked with no groupchat messages; falling back to auto.")
-        return "auto"
-
-    last_message = messages[-1].get("content", "")
-    if not isinstance(last_message, str):
-        logger.warning("Last groupchat message content is not text; falling back to auto.")
-        return "auto"
-
+    last_message = messages[-1]["content"]
     match = re.search(r"Next speaker: (\w+)", last_message)
     if match:
         target_name = match.group(1)
         for agent in groupchat.agents:
             if agent.name == target_name:
                 return agent
-    logger.warning("Unable to determine next speaker from message: %r", last_message[:200])
-    return "auto"
 
 
 @contextlib.contextmanager
@@ -262,26 +274,8 @@ def suppress_output():
             sys.stderr = old_stderr
 
 
-def _safe_count_tokens(payload):
-    try:
-        return count_token(payload)
-    except Exception as exc:
-        logger.warning("Token counting failed; skipping history trimming. Error: %s", exc)
-        return 0
-
-
-def _extract_response_content(response, agent_name):
-    chat_history = getattr(response, "chat_history", None) or []
-    for message in reversed(chat_history):
-        content = message.get("content") if isinstance(message, dict) else None
-        if isinstance(content, str) and content.strip():
-            if message.get("name") in {agent_name, None}:
-                return content.strip()
-            return content.strip()
-    return None
-
-
 def makerequest(group_chat_manager, user_proxy, agent, prompt):
+    llm_config = get_llm_config()
     full_prompt = f"Next speaker: {agent.name}\n{prompt}"
     logger.info(f"Prompt sent to {agent.name}: {full_prompt}")
 
@@ -291,14 +285,14 @@ def makerequest(group_chat_manager, user_proxy, agent, prompt):
     TOKEN_THRESHOLD = MODEL_MAX_CONTEXT - MAX_COMPLETION_TOKENS - SAFETY_BUFFER - 4096
 
     messages_to_send = group_chat_manager.groupchat.messages
-    current_messages_tokens = _safe_count_tokens(messages_to_send)
-    current_prompt_tokens = _safe_count_tokens(full_prompt)
+    current_messages_tokens = safe_count_token(messages_to_send)
+    current_prompt_tokens = safe_count_token(full_prompt)
     current_tokens = current_messages_tokens + current_prompt_tokens
     
     while current_tokens > TOKEN_THRESHOLD:
         if len(messages_to_send) > 1:
             removed_message = messages_to_send.pop(0)
-            current_tokens = _safe_count_tokens(messages_to_send) + current_prompt_tokens
+            current_tokens = safe_count_token(messages_to_send) + current_prompt_tokens
             logger.warning(f"Message history too long; removed one old message. Current tokens: {current_tokens}, threshold: {TOKEN_THRESHOLD}")
         else:
             logger.error("Message history contains only one message but still exceeds token threshold, unable to trim further.")
@@ -307,7 +301,6 @@ def makerequest(group_chat_manager, user_proxy, agent, prompt):
         ag.chat_messages[group_chat_manager] = group_chat_manager.groupchat.messages
 
     try:
-        wait_for_rate_limit()
         with suppress_output():
             response = user_proxy.initiate_chat(
                 group_chat_manager,
@@ -315,9 +308,8 @@ def makerequest(group_chat_manager, user_proxy, agent, prompt):
                 max_turns=1,
                 clear_history=False
             )
-        original_response_text = _extract_response_content(response, agent.name)
-        if not original_response_text:
-            raise ValueError(f"No text response extracted from {agent.name}.")
+        # print(response.chat_history)
+        original_response_text = response.chat_history[-1]["content"].strip()
         logger.info(f"Raw response from {agent.name}: {original_response_text}")
         
         think_index = original_response_text.find("</think>")
@@ -326,13 +318,11 @@ def makerequest(group_chat_manager, user_proxy, agent, prompt):
         else:
             processed_response_text = original_response_text
         logger.info(f"Processed response from {agent.name}: {processed_response_text}")
-        if group_chat_manager.groupchat.messages:
-            group_chat_manager.groupchat.messages[-1]["content"] = processed_response_text
+        group_chat_manager.groupchat.messages[-1]["content"] = processed_response_text
         return processed_response_text
     
     except Exception as e:
-        logger.exception("Error while calling %s with prompt excerpt %r: %s", agent.name, full_prompt[:300], e)
-        dialog_print(f"[{agent.name} error] {type(e).__name__}: {e}")
+        logger.exception(f"Error while calling {agent.name}: %s", e)
         return None
     
 
@@ -356,23 +346,15 @@ def is_necessary(necessity_score, asked_questions):
         return False
     
 
-def save_assessment_results(identifier, overall_score, symptom_level, topic_scores=None, csv_file="depression.csv", scale_name="PHQ-8"):
+def save_assessment_results(identifier, overall_score, symptom_level, updated_scores, csv_file="depression.csv", scale_name="PHQ-8"):
     data = {
         "identifier": identifier,
         "classes": symptom_level,
         "total": overall_score
     }
-
-    if topic_scores is None:
-        topic_scores = {}
-
-    if isinstance(topic_scores, dict):
-        ordered_scores = list(topic_scores.values())
-    else:
-        ordered_scores = list(topic_scores)
-
+    score_values = {topic: details["score"] for topic, details in updated_scores.items()}
     max_items = 8
-    for idx, score in enumerate(ordered_scores[:max_items], 1):
+    for idx, (topic, score) in enumerate(score_values.items(), 1):
         item_key = f"item{idx}"
         data[item_key] = score
     for i in range(1, max_items + 1):
@@ -380,13 +362,15 @@ def save_assessment_results(identifier, overall_score, symptom_level, topic_scor
         if item_key not in data:
             data[item_key] = 0 
 
+    csv_dir = os.path.dirname(csv_file)
+    if csv_dir:
+        os.makedirs(csv_dir, exist_ok=True)
+
     if os.path.isfile(csv_file):
         try:
             df = pd.read_csv(csv_file, encoding='utf-8')
-            normalized_identifiers = df['identifier'].astype(str).str.strip()
-            normalized_identifier = str(identifier).strip()
-            if normalized_identifier in normalized_identifiers.values:
-                index = df.index[normalized_identifiers == normalized_identifier].tolist()[0]
+            if identifier in df['identifier'].values:
+                index = df.index[df['identifier'] == identifier].tolist()[0]
                 for key, value in data.items():
                     df.at[index, key] = value
                 logger.info(f"Updated evaluation results for {identifier}.")

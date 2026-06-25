@@ -1,0 +1,431 @@
+Found 35 JSON files in folder /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/302.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:unknown, gender:unknown, occupation:working with kids as a school teacher or in that capacity
+
+Basic information: Age: unknown, Gender: unknown, Occupation: working
+
+
+--------------------Current Topic: Loss of Interest
+Question: When was the last time you felt a strong interest or pleasure in doing something?
+
+Simulated answer: I'm not really sure when the last time was that I felt a strong interest or pleasure in doing something. It seems like it's been a while.
+Warnings: {'warning_id': 'W001', 'warning_type': 'uncertainty', 'warning_text': "The user's answer indicates uncertainty about the timing of their last experience of strong interest or pleasure."}
+Question: Can you think of a specific activity or situation that you enjoyed in the past, even if it was a long time ago?
+
+Simulated answer: I guess it goes back to when I was a kid, uh I like being happy and playful so I guess it just transferred into my adult life
+Warnings: {'warning_id': 'W002', 'warning_type': 'specific_activity', 'warning_text': "The user's answer suggests that they have a specific activity or situation that they enjoyed in the past, which can provide a clear example to inform further questioning about loss of interest."}
+Question: Can you tell me more about what you enjoyed about being happy and playful as a kid?
+
+Simulated answer: I think what I enjoyed about being happy and playful as a kid was just being carefree and having fun. I guess it's something that's stuck with me into my adult life.
+Warnings: {'warning_id': 'W002', 'warning_type': 'specific_activity', 'warning_text': "The user's answer suggests that they have a specific activity or situation that they enjoyed in the past, which can provide a clear example to inform further questioning about loss of interest."}
+Question: Can you tell me more about what being carefree and having fun meant to you as a kid?
+
+Simulated answer: Being carefree and having fun, I guess it's something that's stuck with me into my adult life.
+Warnings: {'warning_id': 'W002', 'warning_type': 'specific_activity', 'warning_text': "The user's answer suggests that they have a specific activity or situation that they enjoyed in the past, which can provide a clear example to inform further questioning about loss of interest."}
+Question: Can you tell me more about what being carefree and having fun meant to you as a kid?
+
+Simulated answer: Being carefree and having fun, I guess it's something that's stuck with me into my adult life.
+Warnings: {'warning_id': 'W002', 'warning_type': 'specific_activity', 'warning_text': "The user's answer suggests that they have a specific activity or situation that they enjoyed in the past, which can provide a clear example to inform further questioning about loss of interest."}
+
+Total score for topic 'Loss of Interest': 0 points
+Scoring basis: The user's answers indicate a lack of interest or pleasure in doing things, but the user's responses are not clear or specific enough to determine the level of interest or pleasure.
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: I think I might be depressed.
+Warnings: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+Question: Over the past two weeks, have you experienced persistent sadness?
+
+Simulated answer: I think I might be experiencing something like that.
+Warnings: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+Question: Over the past two weeks, have you struggled to feel optimistic or upbeat?
+
+Simulated answer: I don't know, I think I might be struggling with feeling optimistic or upbeat.
+Warnings: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+Question: Can you describe a specific situation or event that made you feel down, depressed, or hopeless?
+
+Simulated answer: I think it's related to my job situation, which isn't stable here in California. It's been affecting me a lot.
+Warnings: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+Question: Can you describe how your job situation in California is affecting you?
+
+Simulated answer: My job situation in California is affecting me a lot, it's not stable and that's one of the reasons I think I might be depressed.
+Warnings: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+
+Total score for topic 'Depressed Mood': 0 points
+Scoring basis: The user's answers indicate a possible case of depressed mood, but the user's responses are not clear or specific enough to determine the level of interest or pleasure.
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: I'm not sure, I've been pretty busy with work and socializing, but I don't think I've had trouble falling or staying asleep.
+Warnings: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+Question: Over the past two weeks, have you felt that your sleep was restless or of poor quality?
+
+Simulated answer: I don't think I've had trouble with my sleep being restless or of poor quality, but I've been pretty busy with work and socializing, so I'm not really sure.
+Warnings: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+Question: Over the past two weeks, have you woken up too early and been unable to fall back asleep?
+
+Simulated answer: I'm not sure, I've been pretty busy with work and socializing, but I don't think I've woken up too early and been unable to fall back asleep.
+Warnings: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+Question: Over the past two weeks, have you experienced any of the following symptoms: difficulty falling asleep, difficulty staying asleep, or waking up too early?
+
+Simulated answer: I'm not sure, I've been pretty busy with work and socializing, but I don't think I've experienced any of those symptoms.
+Warnings: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+Question: Can you describe a typical night's sleep for you?
+
+Simulated answer: Honestly, I'm not sure. I've been pretty busy with work and socializing, so I don't really think about my sleep that much. I don't think I've had trouble falling or staying asleep, but I'm not really sure.
+Warnings: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+
+Total score for topic 'Sleep Problems': 0 points
+Scoring basis: The user's responses are not clear or specific enough to determine the level of sleep problems.
+
+
+
+--------------------Current Topic: Fatigue or Low Energy
+Question: Over the past two weeks, have you felt tired or lacked energy?
+
+Simulated answer: I'm not sure, I've been pretty busy with work and socializing, but I don't think I've felt tired or lacked energy over the past two weeks.
+Warnings: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+Question: Over the past two weeks, have you felt exhausted even after resting?
+
+Simulated answer: I'm not sure, I've been pretty busy with work and socializing, but I don't think I've felt exhausted even after resting over the past two weeks.
+Warnings: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+Question: Over the past two weeks, have you found it hard to carry out tasks due to low energy?
+
+Simulated answer: I'm not sure, I've been pretty busy with work and socializing, but I don't think I've found it hard to carry out tasks due to low energy over the past two weeks.
+Warnings: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+Question: Can you describe a specific situation in the past two weeks when you felt tired or lacked energy?
+
+Simulated answer: I'm not sure, I've been pretty busy with work and socializing, but I don't think I've felt tired or lacked energy over the past two weeks. However, I do recall a situation where I felt overwhelmed with work and social commitments, which might have contributed to my energy levels.
+Warnings: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+Question: Can you describe a specific situation in the past two weeks when you felt tired or lacked energy?
+
+Simulated answer: I do recall a situation where I felt overwhelmed with work and social commitments, which might have contributed to my energy levels.
+Warnings: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+
+Total score for topic 'Fatigue or Low Energy': 0 points
+Scoring basis: The user's responses are not clear or specific enough to determine the level of fatigue or low energy.
+
+
+
+--------------------Current Topic: Appetite or Weight Changes
+Question: Over the past two weeks, have you had a poor appetite or been overeating?
+
+Simulated answer: I'm not sure about my appetite over the past two weeks.
+Warnings: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+Question: Over the past two weeks, have you noticed significant weight loss or gain?
+
+Simulated answer: I'm not sure about my weight over the past two weeks.
+Warnings: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+Question: Over the past two weeks, have your eating habits changed due to your mood?
+
+Simulated answer: I'm not sure if my eating habits have changed due to my mood over the past two weeks.
+Warnings: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+Question: Can you describe a specific situation where you experienced poor appetite or overeating?
+
+Simulated answer: I'm not sure about a specific situation where I experienced poor appetite or overeating.
+Warnings: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+Question: Can you describe a specific situation where you experienced poor appetite or overeating?
+
+Simulated answer: I'm not sure about a specific situation where I experienced poor appetite or overeating.
+Warnings: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+
+Total score for topic 'Appetite or Weight Changes': 0 points
+Scoring basis: The user's responses are not clear or specific enough to determine the level of appetite or weight changes.
+
+
+
+--------------------Current Topic: Low Self-Worth
+Question: Over the past two weeks, have you felt bad about yourself or like a failure?
+
+Simulated answer: I don't feel like I've felt bad about myself or like a failure over the past two weeks.
+Warnings: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+Question: Over the past two weeks, have you experienced feelings of guilt or worthlessness?
+
+Simulated answer: I don't feel like I've experienced feelings of guilt or worthlessness over the past two weeks.
+Warnings: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+Question: Over the past two weeks, have you felt that you’ve let yourself or others down?
+
+Simulated answer: I don't feel like I've let myself or others down over the past two weeks.
+Warnings: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+Question: Can you tell me about a specific situation where you felt bad about yourself or like a failure?
+
+Simulated answer: I think about the good times and the bad times with her, and it's hard for me to stay in a good place because of the job situation in California.
+Warnings: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+Question: Can you tell me more about what you mean by 'it's hard for me to stay in a good place because of the job situation in California'?
+
+Simulated answer: It's hard for me to stay in a good place because of the job situation in California. I think about the good times and the bad times with her, and it's hard for me to stay in a good place because of the job situation in California.
+Warnings: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+
+Total score for topic 'Low Self-Worth': 0 points
+Scoring basis: The user's responses are not clear or specific enough to determine the level of low self-worth.
+
+
+
+--------------------Current Topic: Concentration Difficulties
+Question: Over the past two weeks, have you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not sure if I've had trouble concentrating on tasks like reading or working over the past two weeks.
+Warnings: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+Question: Over the past two weeks, have you felt your mind was foggy or unfocused?
+
+Simulated answer: I'm not sure if my mind was foggy or unfocused over the past two weeks.
+Warnings: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+Question: Over the past two weeks, have you struggled to make decisions due to poor concentration?
+
+Simulated answer: I'm not sure if I've struggled to make decisions due to poor concentration over the past two weeks.
+Warnings: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+Question: Can you describe a specific situation where you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not sure if I can describe a specific situation where I had trouble concentrating on tasks like reading or working.
+Warnings: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+Question: Can you describe a specific situation where you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not sure if I can describe a specific situation where I had trouble concentrating on tasks like reading or working.
+Warnings: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+
+Total score for topic 'Concentration Difficulties': 0 points
+Scoring basis: The user's responses are not clear or specific enough to determine the level of concentration difficulties.
+
+
+
+--------------------Current Topic: Psychomotor Changes
+Question: Over the past two weeks, have you felt slowed down in your movements or speech?
+
+Simulated answer: I don't feel slowed down in my movements or speech.
+Warnings: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+Question: Over the past two weeks, have you been so restless that it’s hard to sit still?
+
+Simulated answer: I don't think I've been so restless that it's hard to sit still over the past two weeks.
+Warnings: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+Question: Over the past two weeks, have you noticed agitation or sluggishness in your behavior?
+
+Simulated answer: I don't think I've noticed any agitation or sluggishness in my behavior over the past two weeks.
+Warnings: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+Question: Can you describe a specific event where you experienced psychomotor changes?
+
+Simulated answer: I don't recall a specific event where I experienced psychomotor changes.
+Warnings: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+Question: Can you describe a specific event where you experienced psychomotor changes?
+
+Simulated answer: I don't recall a specific event where I experienced psychomotor changes.
+Warnings: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+
+Total score for topic 'Psychomotor Changes': 0 points
+Scoring basis: The user's responses are not clear or specific enough to determine the level of psychomotor changes.
+
+
+Number of Q&As in this session: 40
+Assessment results saved to /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/agentmental_tom_results.csv
+
+Automated test completed. Psychological screening report:
+
+# Psychological Scale Assessment Report
+
+## Assessment Scale: PHQ-8
+
+## 1. Scale Results
+
+|   No. | Item                       |   Initial Score |   Final Score |
+|------:|:---------------------------|----------------:|--------------:|
+|     1 | Loss of Interest           |               0 |             0 |
+|     2 | Depressed Mood             |               0 |             0 |
+|     3 | Sleep Problems             |               0 |             0 |
+|     4 | Fatigue or Low Energy      |               0 |             0 |
+|     5 | Appetite or Weight Changes |               0 |             0 |
+|     6 | Low Self-Worth             |               0 |             0 |
+|     7 | Concentration Difficulties |               0 |             0 |
+|     8 | Psychomotor Changes        |               0 |             0 |
+|       | Total Score                |                 |             0 |
+|       | Symptom Level              |                 |             0 |
+
+## 2. Evidence Supporting The Scale Results
+
+- Loss of Interest: The user's answers indicate a lack of interest or pleasure in doing things, but the user's responses are not clear or specific enough to determine the level of interest or pleasure.
+- Depressed Mood: The user's answers indicate a possible case of depressed mood, but the user's responses are not clear or specific enough to determine the level of interest or pleasure.
+- Sleep Problems: The user's responses are not clear or specific enough to determine the level of sleep problems.
+- Fatigue or Low Energy: The user's responses are not clear or specific enough to determine the level of fatigue or low energy.
+- Appetite or Weight Changes: The user's responses are not clear or specific enough to determine the level of appetite or weight changes.
+- Low Self-Worth: The user's responses are not clear or specific enough to determine the level of low self-worth.
+- Concentration Difficulties: The user's responses are not clear or specific enough to determine the level of concentration difficulties.
+- Psychomotor Changes: The user's responses are not clear or specific enough to determine the level of psychomotor changes.
+
+## 3. Contextual And Interpersonal Observations
+
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Loss of Interest: unknown -> unspecified observation
+- Depressed Mood: unknown -> unspecified observation
+- Depressed Mood: unknown -> unspecified observation
+- Depressed Mood: unknown -> unspecified observation
+- Depressed Mood: unknown -> unspecified observation
+- Depressed Mood: unknown -> unspecified observation
+- Sleep Problems: unknown -> unspecified observation
+- Sleep Problems: unknown -> unspecified observation
+- Sleep Problems: unknown -> unspecified observation
+- Sleep Problems: unknown -> unspecified observation
+- Sleep Problems: unknown -> unspecified observation
+- Fatigue or Low Energy: unknown -> unspecified observation
+- Fatigue or Low Energy: unknown -> unspecified observation
+- Fatigue or Low Energy: unknown -> unspecified observation
+- Fatigue or Low Energy: unknown -> unspecified observation
+- Fatigue or Low Energy: unknown -> unspecified observation
+- Appetite or Weight Changes: unknown -> unspecified observation
+- Appetite or Weight Changes: unknown -> unspecified observation
+- Appetite or Weight Changes: unknown -> unspecified observation
+- Appetite or Weight Changes: unknown -> unspecified observation
+- Low Self-Worth: unknown -> unspecified observation
+- Low Self-Worth: unknown -> unspecified observation
+- Low Self-Worth: unknown -> unspecified observation
+- Low Self-Worth: unknown -> unspecified observation
+- Low Self-Worth: unknown -> unspecified observation
+- Concentration Difficulties: unknown -> unspecified observation
+- Concentration Difficulties: unknown -> unspecified observation
+- Concentration Difficulties: unknown -> unspecified observation
+- Concentration Difficulties: unknown -> unspecified observation
+- Concentration Difficulties: unknown -> unspecified observation
+- Concentration Difficulties: unknown -> unspecified observation
+- Concentration Difficulties: unknown -> unspecified observation
+- Concentration Difficulties: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+- Psychomotor Changes: unknown -> unspecified observation
+
+## 4. ToM-Related Observations
+
+Insufficient evidence for stable ToM-related observations.
+
+## 5. Uncertainty And Unresolved Information
+
+- Loss of Interest: scoring confidence was low (0.0).
+- Loss of Interest: {'warning_id': 'W001', 'warning_type': 'uncertainty', 'warning_text': "The user's answer indicates uncertainty about the timing of their last experience of strong interest or pleasure."}
+- Loss of Interest: {'warning_id': 'W002', 'warning_type': 'specific_activity', 'warning_text': "The user's answer suggests that they have a specific activity or situation that they enjoyed in the past, which can provide a clear example to inform further questioning about loss of interest."}
+- Loss of Interest: {'warning_id': 'W002', 'warning_type': 'specific_activity', 'warning_text': "The user's answer suggests that they have a specific activity or situation that they enjoyed in the past, which can provide a clear example to inform further questioning about loss of interest."}
+- Loss of Interest: {'warning_id': 'W002', 'warning_type': 'specific_activity', 'warning_text': "The user's answer suggests that they have a specific activity or situation that they enjoyed in the past, which can provide a clear example to inform further questioning about loss of interest."}
+- Loss of Interest: {'warning_id': 'W002', 'warning_type': 'specific_activity', 'warning_text': "The user's answer suggests that they have a specific activity or situation that they enjoyed in the past, which can provide a clear example to inform further questioning about loss of interest."}
+- Depressed Mood: scoring confidence was low (0.0).
+- Depressed Mood: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+- Depressed Mood: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+- Depressed Mood: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+- Depressed Mood: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+- Depressed Mood: {'warning_id': 'W003', 'warning_type': 'depressed_mood', 'warning_text': "The user's answer indicates a possible case of depressed mood, which requires further exploration to determine the level of severity."}
+- Sleep Problems: scoring confidence was low (0.0).
+- Sleep Problems: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+- Sleep Problems: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+- Sleep Problems: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+- Sleep Problems: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+- Sleep Problems: {'warning_id': 'W004', 'warning_type': 'sleep_problems', 'warning_text': "The user's answer indicates a possible case of sleep problems, but the user's responses are not clear or specific enough to determine the level of sleep problems."}
+- Fatigue or Low Energy: scoring confidence was low (0.0).
+- Fatigue or Low Energy: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+- Fatigue or Low Energy: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+- Fatigue or Low Energy: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+- Fatigue or Low Energy: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+- Fatigue or Low Energy: {'warning_id': 'W005', 'warning_type': 'fatigue_or_low_energy', 'warning_text': "The user's answer indicates a possible case of fatigue or low energy, but the user's responses are not clear or specific enough to determine the level of fatigue or low energy."}
+- Appetite or Weight Changes: scoring confidence was low (0.0).
+- Appetite or Weight Changes: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+- Appetite or Weight Changes: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+- Appetite or Weight Changes: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+- Appetite or Weight Changes: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+- Appetite or Weight Changes: {'warning_id': 'W006', 'warning_type': 'appetite_or_weight_changes', 'warning_text': "The user's answer indicates a possible case of poor appetite or overeating, but the user's responses are not clear or specific enough to determine the level of appetite or weight changes."}
+- Low Self-Worth: scoring confidence was low (0.0).
+- Low Self-Worth: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+- Low Self-Worth: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+- Low Self-Worth: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+- Low Self-Worth: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+- Low Self-Worth: {'warning_id': 'W007', 'warning_type': 'low_self_worth', 'warning_text': "The user's answer indicates a possible case of low self-worth, but the user's responses are not clear or specific enough to determine the level of self-worth."}
+- Concentration Difficulties: scoring confidence was low (0.0).
+- Concentration Difficulties: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+- Concentration Difficulties: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+- Concentration Difficulties: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+- Concentration Difficulties: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+- Concentration Difficulties: {'warning_id': 'W007', 'warning_type': 'concentration_difficulties', 'warning_text': "The user's answer indicates a possible case of concentration difficulties, but the user's responses are not clear or specific enough to determine the level of concentration difficulties."}
+- Psychomotor Changes: scoring confidence was low (0.0).
+- Psychomotor Changes: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+- Psychomotor Changes: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+- Psychomotor Changes: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+- Psychomotor Changes: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+- Psychomotor Changes: {'warning_id': 'W007', 'warning_type': 'psychomotor_changes', 'warning_text': "The user's answer indicates a possible case of psychomotor changes, but the user's responses are not clear or specific enough to determine the level of psychomotor changes."}
+
+## 6. Summary And Screening Disclaimer
+
+The user's responses indicate a lack of interest or pleasure in doing things, but the user's responses are not clear or specific enough to determine the level of interest or pleasure. The user's answers also indicate a possible case of depressed mood, but the user's responses are not clear or specific enough to determine the level of interest or pleasure. The user's responses are not clear or specific enough to determine the level of sleep problems, fatigue or low energy, appetite or weight changes, low self-worth, concentration difficulties, or psychomotor changes.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/307.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:unknown, gender:unknown, occupation:unknown
+
+Basic information: Age: unknown, Gender: unknown, Occupation: unknown
+
+
+--------------------Current Topic: Loss of Interest
+Question: When was the last time you felt a strong interest or pleasure in doing something?
+
+Simulated answer: I'm not sure when the last time was that I felt a strong interest or pleasure in doing something, but it seems like it's been a while.
+Question: Can you provide more specific information about when you last felt a strong interest or pleasure in doing something?
+
+Simulated answer: I think it's been about five months since I quit my full-time job and I haven't found anything else I'm interested in, but I do remember having fun camping with friends for three weeks, and even though I've traveled a lot, Europe started to feel repetitive after a while.
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things?
+
+Simulated answer: I think I've been feeling a bit negative lately, but it's mostly because of the circumstances, like it's been about five months since I quit my full-time job and I haven't found anything else I'm interested in.
+
+Total score for topic 'Loss of Interest': 2 points
+Scoring basis: The user's answer indicates that they have been feeling negative lately, but it's mostly because of the circumstances, which suggests that further assessment of their situation is needed to better understand their loss of interest.
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: I don't know if I've felt down, depressed, or hopeless over the past two weeks.
+Question: Over the past two weeks, have you experienced persistent sadness?
+
+Simulated answer: I don't know if I've experienced persistent sadness over the past two weeks.
+Question: Over the past two weeks, have you struggled to feel optimistic or upbeat?
+
+Simulated answer: I don't know if I've struggled to feel optimistic or upbeat over the past two weeks.
+Question: Can you provide more specific information about your current mood?
+
+Simulated answer: I don't know if I can provide more specific information about my current mood.
+Question: Can you describe a typical day in your life?
+
+Simulated answer: I don't know what a typical day in my life is like.
+
+Total score for topic 'Depressed Mood': 0 points
+Scoring basis: The user's answers indicate a lack of knowledge about their current mood and typical day, which suggests that further assessment of their situation is not needed to better understand their depressed mood.
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: I don't know if I've had trouble falling or staying asleep over the past two weeks.

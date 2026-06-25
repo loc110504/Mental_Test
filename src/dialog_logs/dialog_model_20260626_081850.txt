@@ -1,0 +1,25 @@
+Found 1 JSON files in folder /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/389.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:unknown, gender:unknown, occupation:unknown
+
+Basic information: Age: unknown, Gender: unknown, Occupation: unknown
+
+
+--------------------Current Topic: Loss of Interest
+Question: When you do feel like doing something, what usually stops you from enjoying it?
+
+Simulated answer: I don't know, but it feels like there's always something more to do, like I'm never satisfied with what I'm doing.
+Question: What specific activities or tasks do you feel like you're never satisfied with?
+
+Simulated answer: I don't know, but it feels like there's always something more to do, like I'm never satisfied with what I'm doing.
+Question: What motivates you to do things?
+
+Simulated answer: I don't know, but it feels like there's always something more to do, like I'm never satisfied with what I'm doing.
+Question: What specific activities or tasks do you feel like you're never satisfied with?
+
+Simulated answer: I don't know, but it feels like there's always something more to do, like I'm never satisfied with what I'm doing.

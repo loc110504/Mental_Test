@@ -3,7 +3,7 @@ import uuid
 from openai import OpenAI
 import json
 import logging
-from config import get_api_runtime_config, wait_for_rate_limit
+from config import get_openai_settings
 
 logger = logging.getLogger(__name__)
 
@@ -13,10 +13,11 @@ class MemoryGraph:
         self.user_node = "User"
         self.graph.add_node(self.user_node, type="User", info=user_identification)
         logger.info(f"MemoryGraph initialized for user: {user_identification}")
-        self.runtime_config = get_api_runtime_config()
+        settings = get_openai_settings()
+        self.model_name = settings["model"]
         self.client = OpenAI(
-            base_url=self.runtime_config["base_url"],
-            api_key=self.runtime_config["api_key"]
+            base_url=settings["base_url"],
+            api_key=settings["api_key"]
         )
 
     def add_topic(self, topic_name):
@@ -73,9 +74,8 @@ Output:
 ```
 """
         try:
-            wait_for_rate_limit()
             completion = self.client.chat.completions.create(
-                model=self.runtime_config["model_name"],
+                model=self.model_name,
                 messages=[
                     {"role": "system", "content": "You are a psychological assessment assistant. Extract key information strictly as instructed and return JSON."},
                     {"role": "user", "content": prompt}
@@ -134,11 +134,92 @@ Output:
             statement_id, 
             type="Statement", 
             content=key_info, 
+            raw_text=user_response,
             source_turn=turn_id 
         )
         
         self.graph.add_edge(topic_name, statement_id, relation="has_statement")
         logger.info(f"[MemoryGraph] Added STM for '{topic_name}' (Node ID: {statement_id}, Key Info: {key_info})")
+        return statement_id
+
+    def _heuristic_tom_hypotheses(self, user_response, statement_id):
+        hypotheses = []
+        lowered = user_response.lower()
+
+        if any(term in lowered for term in ["don't want to bother", "don't want to trouble", "burden", "make things worse for them"]):
+            hypotheses.append({
+                "hypothesis_type": "social_belief",
+                "label": "perceived_burdensomeness",
+                "hypothesis_text": "The participant may believe their needs would burden other people.",
+                "evidence_span_ids": [statement_id],
+                "confidence": 0.65,
+                "alternative_explanations": ["The participant may simply prefer privacy."],
+                "missing_information": ["Whether the participant avoids support because they feel like a burden."],
+                "verification_status": "unverified",
+            })
+
+        if any(term in lowered for term in ["i'm okay though", "probably okay", "not that bad", "fine i guess"]):
+            hypotheses.append({
+                "hypothesis_type": "communicative_intent",
+                "label": "possible_symptom_minimization",
+                "hypothesis_text": "The participant may be minimizing the severity or frequency of symptoms.",
+                "evidence_span_ids": [statement_id],
+                "confidence": 0.6,
+                "alternative_explanations": ["The participant may genuinely see the symptom as mild."],
+                "missing_information": ["How often the symptom occurs over the past two weeks."],
+                "verification_status": "unverified",
+            })
+
+        if any(term in lowered for term in ["worthless", "failure", "useless", "not useful anymore"]):
+            hypotheses.append({
+                "hypothesis_type": "self_belief",
+                "label": "negative_self_belief",
+                "hypothesis_text": "The participant may hold a negative belief about their self-worth.",
+                "evidence_span_ids": [statement_id],
+                "confidence": 0.75,
+                "alternative_explanations": ["The statement may reflect temporary frustration rather than a persistent belief."],
+                "missing_information": ["Whether this belief is recurrent during the last two weeks."],
+                "verification_status": "unverified",
+            })
+
+        return hypotheses[:3]
+
+    def add_tom_hypotheses(self, topic_name, hypotheses, fallback_statement_id=None, user_response=""):
+        if not hypotheses and fallback_statement_id:
+            hypotheses = self._heuristic_tom_hypotheses(user_response, fallback_statement_id)
+
+        created_ids = []
+        for item in hypotheses[:3]:
+            hypothesis_id = f"tom_{uuid.uuid4().hex}"
+            evidence_ids = item.get("evidence_span_ids") or ([fallback_statement_id] if fallback_statement_id else [])
+            self.graph.add_node(
+                hypothesis_id,
+                type="ToMHypothesis",
+                hypothesis_type=item.get("hypothesis_type", "unknown"),
+                label=item.get("label", "unknown"),
+                hypothesis_text=item.get("hypothesis_text", ""),
+                evidence_span_ids=evidence_ids,
+                confidence=item.get("confidence", 0.0),
+                alternative_explanations=item.get("alternative_explanations", []),
+                missing_information=item.get("missing_information", []),
+                verification_status=item.get("verification_status", "unverified"),
+            )
+            self.graph.add_edge(topic_name, hypothesis_id, relation="has_hypothesis")
+            self.graph.add_edge(hypothesis_id, topic_name, relation="relevant_to_topic")
+            self.graph.add_edge(hypothesis_id, topic_name, relation="requires_verification")
+            for evidence_id in evidence_ids:
+                if evidence_id and self.graph.has_node(evidence_id):
+                    self.graph.add_edge(hypothesis_id, evidence_id, relation="supported_by")
+            created_ids.append(hypothesis_id)
+            logger.info(f"[MemoryGraph] Added ToM hypothesis for '{topic_name}' (Node ID: {hypothesis_id})")
+
+        return created_ids
+
+    def update_hypothesis_status(self, hypothesis_ids, status):
+        for hypothesis_id in hypothesis_ids:
+            if self.graph.has_node(hypothesis_id) and self.graph.nodes[hypothesis_id].get("type") == "ToMHypothesis":
+                self.graph.nodes[hypothesis_id]["verification_status"] = status
+                logger.info(f"[MemoryGraph] Updated hypothesis '{hypothesis_id}' to status '{status}'.")
 
     def _trigger_holistic_reassessment(self, new_topic_name, new_topic_score, new_topic_summary, new_topic_statements_str):
         past_completed_topics = [
@@ -208,9 +289,8 @@ Provide a strict JSON response with a single key "results", which is a list of o
 ```
 """
         try:
-            wait_for_rate_limit()
             completion = self.client.chat.completions.create(
-                model=self.runtime_config["model_name"],
+                model=self.model_name,
                 messages=[
                     {"role": "system", "content": "You are a senior clinical psychologist performing a file review. Output your findings in the specified JSON format only."},
                     {"role": "user", "content": holistic_reassessment_prompt}
@@ -283,7 +363,8 @@ Provide a strict JSON response with a single key "results", which is a list of o
     def get_context_for_prompt(self, current_topic):
         memory_data = {
             "long_term_memory": [],
-            "short_term_memory": []
+            "short_term_memory": [],
+            "tom_hypotheses": []
         }
 
         completed_topics = [n for n, d in self.graph.nodes(data=True) if d.get('type') == 'Topic' and d.get('status') == 'completed']
@@ -302,10 +383,28 @@ Provide a strict JSON response with a single key "results", which is a list of o
             for neighbor in self.graph.successors(current_topic):
                 if self.graph.nodes[neighbor].get('type') == 'Statement':
                     statements.append({
+                        "node_id": neighbor,
                         "content": self.graph.nodes[neighbor].get('content'),
+                        "raw_text": self.graph.nodes[neighbor].get('raw_text', ''),
                         "source_turn": self.graph.nodes[neighbor].get('source_turn')
                     })
             memory_data["short_term_memory"] = statements
+
+            hypotheses = []
+            for neighbor in self.graph.successors(current_topic):
+                if self.graph.nodes[neighbor].get('type') == 'ToMHypothesis':
+                    hypotheses.append({
+                        "node_id": neighbor,
+                        "hypothesis_type": self.graph.nodes[neighbor].get('hypothesis_type'),
+                        "label": self.graph.nodes[neighbor].get('label'),
+                        "hypothesis_text": self.graph.nodes[neighbor].get('hypothesis_text'),
+                        "evidence_span_ids": self.graph.nodes[neighbor].get('evidence_span_ids', []),
+                        "confidence": self.graph.nodes[neighbor].get('confidence', 0.0),
+                        "alternative_explanations": self.graph.nodes[neighbor].get('alternative_explanations', []),
+                        "missing_information": self.graph.nodes[neighbor].get('missing_information', []),
+                        "verification_status": self.graph.nodes[neighbor].get('verification_status', 'unverified')
+                    })
+            memory_data["tom_hypotheses"] = hypotheses
 
         context = json.dumps(memory_data, ensure_ascii=False, indent=2)
         logger.info(f"[MemoryGraph] Generated JSON context for topic '{current_topic}': {context}")

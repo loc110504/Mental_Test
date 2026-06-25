@@ -1,0 +1,1378 @@
+Found 35 JSON files in folder /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/302.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:25, gender:female, occupation:school teacher
+
+Basic information: Age: 25, Gender: female, Occupation: school
+
+
+--------------------Current Topic: Loss of Interest
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things?
+
+Simulated answer: I'm not really sure, I haven't thought about it that much. I mean, there are people who are always there for me, but that doesn't necessarily mean I've been interested in doing things.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you lost enthusiasm for activities you usually enjoy?
+
+Simulated answer: To be honest, I'm still not really sure. I haven't thought about it that much, and like I said before, there are people who are always there for me, but that doesn't necessarily mean I've been interested in doing things. I just don't have a clear feeling about whether I've lost enthusiasm for activities I usually enjoy.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you found it hard to get motivated for hobbies or tasks?
+
+Simulated answer: Honestly, I'm still not really sure. I haven't thought about it that much, and like I said before, there are people who are always there for me, but that doesn't necessarily mean I've been interested in doing things or motivated for hobbies or tasks. I just don't have a clear feeling about this.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+
+Total score for topic 'Loss of Interest': 0 points
+Scoring basis: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of interest and enthusiasm.
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: To be honest, I think I might be depressed, but I'm not really sure how often I've felt down over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you experienced persistent sadness?
+
+Simulated answer: Honestly, I think I might be depressed, and it's possible I've experienced persistent sadness over the past two weeks, but I'm not really sure how often or how long it's lasted.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you struggled to feel optimistic or upbeat?
+
+Simulated answer: To be honest, I'm not really sure. I think I might be depressed, and it's possible that I've struggled to feel optimistic or upbeat over the past two weeks, but I'm not really sure how often or to what extent.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+
+Total score for topic 'Depressed Mood': 1 points
+Scoring basis: The user's uncertainty about their experience of depressed mood, persistent sadness, and struggle to feel optimistic or upbeat suggests that they may be bothered by feeling down, depressed, or hopeless for several days over the past two weeks.
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about sleep problems over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you felt that your sleep was restless or of poor quality?
+
+Simulated answer: I haven't mentioned anything about my sleep being restless or of poor quality over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you woken up too early and been unable to fall back asleep?
+
+Simulated answer: I haven't mentioned anything about waking up too early and being unable to fall back asleep over the past two weeks.
+
+Total score for topic 'Sleep Problems': 0 points
+Scoring basis: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of sleep problems.
+
+
+
+--------------------Current Topic: Fatigue or Low Energy
+Question: Over the past two weeks, have you felt tired or lacked energy?
+
+Simulated answer: I'm not sure, I haven't really talked about feeling tired or lacking energy.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you felt exhausted even after resting?
+
+Simulated answer: I'm still not sure, I haven't really thought about feeling exhausted after resting over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+
+Total score for topic 'Fatigue or Low Energy': 0 points
+Scoring basis: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of fatigue or low energy.
+
+
+
+--------------------Current Topic: Appetite or Weight Changes
+Question: Over the past two weeks, have you had a poor appetite or been overeating?
+
+Simulated answer: I'm not sure, I haven't really thought about my appetite or eating habits over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you noticed significant weight loss or gain?
+
+Simulated answer: I haven't really thought about my weight changes over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have your eating habits changed due to your mood?
+
+Simulated answer: I'm not sure, I haven't really thought about how my mood has affected my eating habits over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+
+Total score for topic 'Appetite or Weight Changes': 0 points
+Scoring basis: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of appetite or weight changes.
+
+
+
+--------------------Current Topic: Low Self-Worth
+Question: Over the past two weeks, have you felt bad about yourself or like a failure?
+
+Simulated answer: I'm not really sure, I don't have enough information to say whether I've felt bad about myself or like a failure over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you experienced feelings of guilt or worthlessness?
+
+Simulated answer: I'm not really sure, I don't have enough information to say whether I've experienced feelings of guilt or worthlessness over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+
+Total score for topic 'Low Self-Worth': 0 points
+Scoring basis: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of low self-worth.
+
+
+
+--------------------Current Topic: Concentration Difficulties
+Question: Over the past two weeks, have you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about having trouble concentrating on tasks like reading or working over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you felt your mind was foggy or unfocused?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about feeling my mind was foggy or unfocused over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you struggled to make decisions due to poor concentration?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about struggling to make decisions due to poor concentration over the past two weeks.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+
+Total score for topic 'Concentration Difficulties': 0 points
+Scoring basis: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of concentration difficulties.
+
+
+
+--------------------Current Topic: Psychomotor Changes
+Question: Over the past two weeks, have you felt slowed down in your movements or speech?
+
+Simulated answer: I'm not really sure about feeling slowed down, but I have felt fidgety.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you been so restless that it’s hard to sit still?
+
+Simulated answer: I've felt fidgety, like I mentioned before, but I'm not sure if it's been bad enough that it's hard to sit still. I just know I've had a lot of energy and felt restless.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+Question: Over the past two weeks, have you noticed agitation or sluggishness in your behavior?
+
+Simulated answer: I've already mentioned feeling fidgety and restless, but I'm not sure if that's the same as agitation. I don't really know about sluggishness, I haven't thought about it that way.
+Warnings: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+
+Total score for topic 'Psychomotor Changes': 1 points
+Scoring basis: The user reports feeling fidgety and restless, but is unsure if it's severe enough to be bothersome. This suggests that they have experienced some level of psychomotor change, but the frequency and severity are unclear.
+
+
+Number of Q&As in this session: 22
+Assessment results saved to /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/tom_llama-33-70b-instruct_results.csv
+
+Automated test completed. Psychological screening report:
+
+# Psychological Scale Assessment Report
+
+## Assessment Scale: PHQ-8
+
+## 1. Scale Results
+
+|   No. | Item                       |   Initial Score |   Final Score |
+|------:|:---------------------------|----------------:|--------------:|
+|     1 | Loss of Interest           |               0 |             0 |
+|     2 | Depressed Mood             |               1 |             1 |
+|     3 | Sleep Problems             |               0 |             0 |
+|     4 | Fatigue or Low Energy      |               0 |             0 |
+|     5 | Appetite or Weight Changes |               0 |             0 |
+|     6 | Low Self-Worth             |               0 |             0 |
+|     7 | Concentration Difficulties |               0 |             0 |
+|     8 | Psychomotor Changes        |               1 |             1 |
+|       | Total Score                |                 |             2 |
+|       | Symptom Level              |                 |             0 |
+
+## 2. Evidence Supporting The Scale Results
+
+- Loss of Interest: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of interest and enthusiasm.
+- Depressed Mood: The user's uncertainty about their experience of depressed mood, persistent sadness, and struggle to feel optimistic or upbeat suggests that they may be bothered by feeling down, depressed, or hopeless for several days over the past two weeks.
+- Sleep Problems: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of sleep problems.
+- Fatigue or Low Energy: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of fatigue or low energy.
+- Appetite or Weight Changes: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of appetite or weight changes.
+- Low Self-Worth: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of low self-worth.
+- Concentration Difficulties: The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience, making it challenging to accurately assess their level of concentration difficulties.
+- Psychomotor Changes: The user reports feeling fidgety and restless, but is unsure if it's severe enough to be bothersome. This suggests that they have experienced some level of psychomotor change, but the frequency and severity are unclear.
+
+## 3. Contextual And Interpersonal Observations
+
+- Loss of Interest: note -> User is uncertain about their interest in activities
+- Loss of Interest: note -> User is uncertain about their interest in activities
+- Loss of Interest: note -> User lacks clear feeling about lost enthusiasm for activities
+- Loss of Interest: note -> User is uncertain about their interest in activities
+- Loss of Interest: note -> User lacks clear feeling about lost enthusiasm for activities
+- Loss of Interest: note -> User is uncertain about their interest in activities
+- Loss of Interest: note -> User lacks clear feeling about lost enthusiasm for activities
+- Depressed Mood: note -> User is uncertain about their experience of depressed mood
+- Depressed Mood: note -> User is uncertain about their experience of persistent sadness
+- Depressed Mood: note -> User is uncertain about their experience of depressed mood
+- Depressed Mood: note -> User is uncertain about their experience of persistent sadness
+- Depressed Mood: note -> User is uncertain about their struggle to feel optimistic or upbeat
+- Depressed Mood: note -> The user's consistent uncertainty across multiple questions suggests a lack of clarity in their experience.
+- Depressed Mood: note -> The user's uncertainty may indicate a need for more open-ended questioning to gather more information.
+- Sleep Problems: note -> User is uncertain about their sleep problems
+- Sleep Problems: note -> User is uncertain about their sleep quality
+- Fatigue or Low Energy: note -> User is uncertain about their experience of fatigue or low energy
+- Fatigue or Low Energy: note -> User is uncertain about their experience of fatigue or low energy
+- Fatigue or Low Energy: note -> User is uncertain about their experience of exhaustion after resting
+- Fatigue or Low Energy: note -> User is uncertain about their experience of fatigue or low energy
+- Fatigue or Low Energy: note -> User is uncertain about their experience of exhaustion after resting
+- Appetite or Weight Changes: note -> User is uncertain about their appetite or eating habits
+- Appetite or Weight Changes: note -> User is uncertain about their weight changes
+- Appetite or Weight Changes: note -> User is uncertain about their appetite or eating habits
+- Appetite or Weight Changes: note -> User is uncertain about their weight changes
+- Appetite or Weight Changes: note -> User is uncertain about their eating habits due to mood
+- Appetite or Weight Changes: note -> User is uncertain about their appetite or eating habits
+- Appetite or Weight Changes: note -> User is uncertain about their weight changes
+- Appetite or Weight Changes: note -> User is uncertain about their eating habits due to mood
+- Low Self-Worth: note -> User is uncertain about feeling bad about themselves or like a failure
+- Low Self-Worth: note -> User is uncertain about feeling bad about themselves or like a failure
+- Low Self-Worth: note -> User is uncertain about experiencing feelings of guilt or worthlessness
+- Low Self-Worth: note -> User is uncertain about feeling bad about themselves or like a failure
+- Low Self-Worth: note -> User is uncertain about experiencing feelings of guilt or worthlessness
+- Concentration Difficulties: note -> User is uncertain about having trouble concentrating on tasks like reading or working
+- Concentration Difficulties: note -> User is uncertain about having trouble concentrating on tasks like reading or working
+- Concentration Difficulties: note -> User is uncertain about feeling their mind was foggy or unfocused
+- Concentration Difficulties: note -> User is uncertain about having trouble concentrating on tasks like reading or working
+- Concentration Difficulties: note -> User is uncertain about feeling their mind was foggy or unfocused
+- Concentration Difficulties: note -> User is uncertain about struggling to make decisions due to poor concentration
+- Concentration Difficulties: note -> User is uncertain about having trouble concentrating on tasks like reading or working
+- Concentration Difficulties: note -> User is uncertain about feeling their mind was foggy or unfocused
+- Concentration Difficulties: note -> User is uncertain about struggling to make decisions due to poor concentration
+- Psychomotor Changes: note -> User is uncertain about feeling slowed down, but mentions feeling fidgety
+- Psychomotor Changes: note -> User reports feeling fidgety and restless, but unsure if it's severe enough to be bothersome
+- Psychomotor Changes: note -> User is uncertain about feeling slowed down, but mentions feeling fidgety
+- Psychomotor Changes: note -> User reports feeling fidgety and restless, but unsure if it's severe enough to be bothersome
+
+## 4. ToM-Related Observations
+
+Insufficient evidence for stable ToM-related observations.
+
+## 5. Uncertainty And Unresolved Information
+
+- Loss of Interest: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Loss of Interest: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Loss of Interest: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Depressed Mood: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Depressed Mood: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Depressed Mood: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Sleep Problems: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Sleep Problems: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Fatigue or Low Energy: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Fatigue or Low Energy: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Appetite or Weight Changes: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Appetite or Weight Changes: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Appetite or Weight Changes: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Low Self-Worth: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Low Self-Worth: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Concentration Difficulties: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Concentration Difficulties: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Concentration Difficulties: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Psychomotor Changes: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Psychomotor Changes: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+- Psychomotor Changes: User's uncertainty may indicate a need for more open-ended questioning to gather more information
+
+## 6. Summary And Screening Disclaimer
+
+The user reports feeling fidgety and restless, but is unsure if it's severe enough to be bothersome. This suggests that they have experienced some level of psychomotor change, but the frequency and severity are unclear. The user's uncertainty about their experience of depressed mood, persistent sadness, and struggle to feel optimistic or upbeat suggests that they may be bothered by feeling down, depressed, or hopeless for several days over the past two weeks.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/307.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:young adult, gender:male, occupation:restaurant worker
+
+Basic information: Age: unknown, Gender: male, Occupation: adult
+
+
+--------------------Current Topic: Loss of Interest
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things?
+
+Simulated answer: I'm not really sure, to be honest. I mean, I've been dealing with some frustrating situations, like with my roommates and trying to find a job that doesn't feel like I'm just going back to the same old thing. But as for feeling little interest or pleasure in doing things, I don't know if I'd say that's been a constant thing for me over the past two weeks. I used to enjoy writing, for example, and I've thought about how I would've continued doing that if things were different. But lately, I haven't really been doing much of that. I did have a bit of a fun time recently, though, when I took my mom and little brother out to dinner and did some shopping. So, I guess it's been a bit of a mix for me.
+Question: Over the past two weeks, have you lost enthusiasm for activities you usually enjoy?
+
+Simulated answer: I'm not really sure. I mean, I used to enjoy writing, but I haven't been doing that as much lately. And, I've been dealing with some frustrating situations, like with my roommates and trying to find a job. But, as for losing enthusiasm for activities I usually enjoy, I don't know if I'd say that's been a constant thing for me over the past two weeks. It's been a bit of a mix, I guess.
+Question: Over the past two weeks, how many days have you felt little interest or pleasure in doing things?
+
+Simulated answer: To be honest, I'm not really sure. I've had a mix of experiences over the past two weeks, with some days being more enjoyable than others. I've been dealing with frustrating situations, and I haven't been doing things I used to enjoy, like writing, as much lately. But I don't know if I'd say that's been a constant thing for me. It's hard for me to pinpoint exactly how many days I've felt little interest or pleasure in doing things.
+
+Total score for topic 'Loss of Interest': 1 points
+Scoring basis: The user's responses indicate a mix of experiences, with some days being more enjoyable than others, and they have been dealing with frustrating situations. The user used to enjoy writing but hasn't been doing it lately, and they had a fun time recently with family.
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: I'm not really sure, to be honest. I mean, I've had some ups and downs, like with my roommates and stuff, but I don't know if I'd say I've felt down, depressed, or hopeless specifically over the past two weeks.
+Question: Over the past two weeks, have you experienced persistent sadness?
+
+Simulated answer: I'm not really sure, to be honest. I mean, I've had some ups and downs, like with my roommates and stuff, but I don't know if I'd say I've experienced persistent sadness specifically over the past two weeks.
+Question: Over the past two weeks, have you struggled to feel optimistic or upbeat?
+
+Simulated answer: Honestly, I'm not really sure. I've had some ups and downs, like with my roommates and stuff, but I don't know if I'd say I've struggled to feel optimistic or upbeat specifically over the past two weeks. It's just been a bit of a mixed bag, you know?
+
+Total score for topic 'Depressed Mood': 1 points
+Scoring basis: The user's responses indicate a mix of experiences, with some days being more enjoyable than others, and they have been dealing with frustrating situations.
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about sleep problems over the past two weeks.
+Question: Over the past two weeks, have you felt that your sleep was restless or of poor quality?
+
+Simulated answer: I haven't mentioned anything about the quality of my sleep over the past two weeks.
+Question: Over the past two weeks, have you woken up too early and been unable to fall back asleep?
+
+Simulated answer: I haven't mentioned anything about waking up too early and being unable to fall back asleep over the past two weeks.
+Warnings: Insufficient information to determine the severity of sleep problems
+
+Total score for topic 'Sleep Problems': 0 points
+Scoring basis: The user's responses indicate a lack of information about their sleep problems, and the topic was stopped due to insufficient information.
+
+
+
+--------------------Current Topic: Fatigue or Low Energy
+Question: Over the past two weeks, have you felt tired or lacked energy?
+
+Simulated answer: I've felt tired and had low energy, I'd say it's been going on and off, especially considering I haven't seen my friends in two weeks and there's been drama with my roommates. I described myself as 'grumpy and just very lethargic and just low energy' which has been my state lately.
+Question: Over the past two weeks, have you felt exhausted even after resting?
+
+Simulated answer: I've been feeling grumpy and very lethargic, with low energy, which has been my state lately. Even after resting, I still feel exhausted, but I'm not sure how often this happens. It's just hard to live this way, especially after paying so much money for an amazing college education, and it's a little bit frustrating.
+Question: Over the past two weeks, have you found it hard to carry out tasks due to low energy?
+
+Simulated answer: I've been feeling grumpy and very lethargic, with low energy, which has been my state lately. It's hard for me to carry out tasks, especially considering I haven't found a new job after quitting my full-time job about five months ago. I'd say it's been a struggle, but I'm not sure how often this happens. It's just hard to live this way, especially after paying so much money for an amazing college education, and it's a little bit frustrating.
+
+Total score for topic 'Fatigue or Low Energy': 2 points
+Scoring basis: The user has been experiencing fatigue and low energy, and the impact of their fatigue on their daily life and activities has been clarified. The user's responses indicate that they have been bothered by feeling tired or having little energy for more than half the days over the past two weeks.
+
+
+
+--------------------Current Topic: Appetite or Weight Changes
+Question: Over the past two weeks, have you had a poor appetite or been overeating?
+
+Simulated answer: I haven't mentioned anything about my appetite or eating habits over the past two weeks, so I'm not sure.
+Question: Over the past two weeks, have you noticed significant weight loss or gain?
+
+Simulated answer: I haven't mentioned anything about my weight over the past two weeks, so I'm not sure.
+Question: Over the past two weeks, have your eating habits changed due to your mood?
+
+Simulated answer: I haven't mentioned anything about my eating habits changing due to my mood over the past two weeks, so I'm not sure.
+
+Total score for topic 'Appetite or Weight Changes': 0 points
+Scoring basis: The user's responses indicate uncertainty about their appetite or weight changes, and there is not enough information to determine the severity of their appetite or weight changes.
+
+
+
+--------------------Current Topic: Low Self-Worth
+Question: Over the past two weeks, have you felt bad about yourself or like a failure?
+
+Simulated answer: I'm not really sure, I mean, I've had ups and downs since I graduated and moved in with my roommates, but I don't think I've felt bad about myself or like a failure specifically over the past two weeks. I've been adjusting to living here for about a year now, and it's had its challenges, but I finally feel like I've gotten used to it. However, I did mention that my major in sociology didn't give me the practical results I was hoping for, which might contribute to some feelings of uncertainty or dissatisfaction, but I'm not sure if that's the same as feeling bad about myself.
+Question: Over the past two weeks, have you experienced feelings of guilt or worthlessness?
+
+Simulated answer: I'm not really sure, to be honest. I mean, I've been dealing with some frustration about my job situation and feeling like I'm not living up to my potential, especially compared to my friends who are doing really well. But as for feelings of guilt or worthlessness specifically over the past two weeks, I don't think I've experienced them directly. It's more like a general sense of uncertainty and dissatisfaction with my current situation.
+Question: Over the past two weeks, have you felt that you’ve let yourself or others down?
+
+Simulated answer: I'm not really sure, to be honest. I mean, I've had ups and downs since I graduated and moved in with my roommates, and there's always some drama here and there, but I don't think I've felt like I've let myself or others down specifically over the past two weeks. I've been adjusting to living here for about a year now, and it's had its challenges, but I finally feel like I've gotten used to it.
+
+Total score for topic 'Low Self-Worth': 0 points
+Scoring basis: The user's responses indicate uncertainty about their feelings of low self-worth, guilt or worthlessness, and letting oneself or others down over the past two weeks. However, the user has provided enough information to determine that they have not been significantly bothered by these feelings.
+
+
+
+--------------------Current Topic: Concentration Difficulties
+Question: Over the past two weeks, have you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not sure, I haven't really thought about it. I've been working and trying to hang out with my roommates, but our schedules have been off. I used to write a lot when I was younger, but I don't know if I've had trouble concentrating recently.
+Question: Over the past two weeks, have you felt your mind was foggy or unfocused?
+
+Simulated answer: I'm not really sure. To be honest, I haven't thought about it much. My life has been pretty busy with work and hanging out with my roommates, but like I said before, our schedules have been off. I don't know if I've felt my mind was foggy or unfocused recently.
+Question: Over the past two weeks, have you struggled to make decisions due to poor concentration?
+
+Simulated answer: I'm not really sure. I haven't thought about it much. My life has been pretty busy with work and hanging out with my roommates, but like I said before, our schedules have been off. I don't know if I've struggled to make decisions due to poor concentration recently.
+
+Total score for topic 'Concentration Difficulties': 0 points
+Scoring basis: The user's responses indicate uncertainty about their concentration difficulties, and further clarification is needed to determine the severity of their symptoms. However, the user has provided enough information to determine that they have not been significantly bothered by concentration difficulties.
+
+
+
+--------------------Current Topic: Psychomotor Changes
+Question: Over the past two weeks, have you felt slowed down in your movements or speech?
+
+Simulated answer: I haven't really talked about feeling slowed down in my movements or speech, but I did mention getting restless very easily in new places, which might be related.
+Question: Over the past two weeks, have you been so restless that it’s hard to sit still?
+
+Simulated answer: I get restless very easily, and that's been the case over the past two weeks. For example, I mentioned earlier that I get restless in new places, and that's still true. However, I haven't specifically talked about feeling restless over the past two weeks in a way that makes it hard to sit still.
+Question: Over the past two weeks, have you noticed agitation or sluggishness in your behavior?
+
+Simulated answer: I haven't really talked about noticing agitation or sluggishness in my behavior over the past two weeks, but I did mention getting restless very easily in new places, which might be related. However, I'm not sure if that's exactly what you're asking about.
+
+Total score for topic 'Psychomotor Changes': 1 points
+Scoring basis: The user's responses indicate uncertainty about their psychomotor changes, but they get restless very easily, which might be related to psychomotor changes.
+
+
+Number of Q&As in this session: 24
+Assessment results saved to /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/tom_llama-33-70b-instruct_results.csv
+
+Automated test completed. Psychological screening report:
+
+# Psychological Scale Assessment Report
+
+## Assessment Scale: PHQ-8
+
+## 1. Scale Results
+
+|   No. | Item                       |   Initial Score |   Final Score |
+|------:|:---------------------------|----------------:|--------------:|
+|     1 | Loss of Interest           |               1 |             1 |
+|     2 | Depressed Mood             |               1 |             1 |
+|     3 | Sleep Problems             |               0 |             0 |
+|     4 | Fatigue or Low Energy      |               2 |             2 |
+|     5 | Appetite or Weight Changes |               0 |             0 |
+|     6 | Low Self-Worth             |               0 |             0 |
+|     7 | Concentration Difficulties |               0 |             0 |
+|     8 | Psychomotor Changes        |               1 |             1 |
+|       | Total Score                |                 |             5 |
+|       | Symptom Level              |                 |             0 |
+
+## 2. Evidence Supporting The Scale Results
+
+- Loss of Interest: The user's responses indicate a mix of experiences, with some days being more enjoyable than others, and they have been dealing with frustrating situations. The user used to enjoy writing but hasn't been doing it lately, and they had a fun time recently with family.
+- Depressed Mood: The user's responses indicate a mix of experiences, with some days being more enjoyable than others, and they have been dealing with frustrating situations.
+- Sleep Problems: The user's responses indicate a lack of information about their sleep problems, and the topic was stopped due to insufficient information.
+- Fatigue or Low Energy: The user has been experiencing fatigue and low energy, and the impact of their fatigue on their daily life and activities has been clarified. The user's responses indicate that they have been bothered by feeling tired or having little energy for more than half the days over the past two weeks.
+- Appetite or Weight Changes: The user's responses indicate uncertainty about their appetite or weight changes, and there is not enough information to determine the severity of their appetite or weight changes.
+- Low Self-Worth: The user's responses indicate uncertainty about their feelings of low self-worth, guilt or worthlessness, and letting oneself or others down over the past two weeks. However, the user has provided enough information to determine that they have not been significantly bothered by these feelings.
+- Concentration Difficulties: The user's responses indicate uncertainty about their concentration difficulties, and further clarification is needed to determine the severity of their symptoms. However, the user has provided enough information to determine that they have not been significantly bothered by concentration difficulties.
+- Psychomotor Changes: The user's responses indicate uncertainty about their psychomotor changes, but they get restless very easily, which might be related to psychomotor changes.
+
+## 3. Contextual And Interpersonal Observations
+
+- Loss of Interest: note -> User has been dealing with frustrating situations
+- Loss of Interest: note -> User used to enjoy writing but hasn't been doing it lately
+- Loss of Interest: note -> User had a fun time recently with family
+- Loss of Interest: note -> User has been dealing with frustrating situations
+- Loss of Interest: note -> User used to enjoy writing but hasn't been doing it lately
+- Loss of Interest: note -> User had a fun time recently with family
+- Loss of Interest: note -> User has been dealing with frustrating situations
+- Loss of Interest: note -> User used to enjoy writing but hasn't been doing it lately
+- Loss of Interest: note -> User had a fun time recently with family
+- Loss of Interest: note -> The user's responses indicate a mix of experiences, with some days being more enjoyable than others.
+- Loss of Interest: note -> The user has been dealing with frustrating situations, such as with roommates and trying to find a job.
+- Depressed Mood: note -> User has been dealing with frustrating situations
+- Depressed Mood: note -> User used to enjoy writing but hasn't been doing it lately
+- Depressed Mood: note -> User had a fun time recently with family
+- Depressed Mood: note -> User has been dealing with frustrating situations
+- Depressed Mood: note -> User used to enjoy writing but hasn't been doing it lately
+- Depressed Mood: note -> User had a fun time recently with family
+- Depressed Mood: note -> User has been dealing with frustrating situations
+- Depressed Mood: note -> User used to enjoy writing but hasn't been doing it lately
+- Depressed Mood: note -> User had a fun time recently with family
+- Sleep Problems: note -> The user was uncertain about their experience with sleep problems.
+- Sleep Problems: note -> The user did not provide enough information to determine the severity of their sleep problems.
+- Fatigue or Low Energy: note -> The user has been feeling tired and having low energy, especially considering they haven't seen their friends in two weeks and there's been drama with their roommates.
+- Fatigue or Low Energy: note -> The user has been feeling tired and having low energy, especially considering they haven't seen their friends in two weeks and there's been drama with their roommates.
+- Fatigue or Low Energy: note -> The user has been feeling tired and having low energy, especially considering they haven't seen their friends in two weeks and there's been drama with their roommates.
+- Appetite or Weight Changes: note -> The user is uncertain about their appetite or eating habits over the past two weeks.
+- Appetite or Weight Changes: note -> The user is uncertain about their weight changes over the past two weeks.
+- Appetite or Weight Changes: note -> The user is uncertain about their appetite or eating habits over the past two weeks.
+- Appetite or Weight Changes: note -> The user is uncertain about their weight changes over the past two weeks.
+- Low Self-Worth: note -> The user is uncertain about their feelings of low self-worth over the past two weeks.
+- Low Self-Worth: note -> The user is uncertain about their feelings of guilt or worthlessness over the past two weeks.
+- Low Self-Worth: note -> The user is uncertain about their feelings of low self-worth over the past two weeks.
+- Low Self-Worth: note -> The user is uncertain about their feelings of guilt or worthlessness over the past two weeks.
+- Low Self-Worth: note -> The user is uncertain about their feelings of letting oneself or others down over the past two weeks.
+- Concentration Difficulties: note -> The user is uncertain about their concentration difficulties over the past two weeks.
+- Concentration Difficulties: note -> The user is uncertain about their mind being foggy or unfocused over the past two weeks.
+- Concentration Difficulties: note -> The user is uncertain about their concentration difficulties over the past two weeks.
+- Psychomotor Changes: note -> The user is uncertain about their psychomotor changes over the past two weeks.
+- Psychomotor Changes: note -> The user gets restless very easily, but it's unclear if this restlessness is related to psychomotor changes.
+- Psychomotor Changes: note -> The user is uncertain about their psychomotor changes over the past two weeks, but gets restless very easily.
+
+## 4. ToM-Related Observations
+
+Insufficient evidence for stable ToM-related observations.
+
+## 5. Uncertainty And Unresolved Information
+
+- Sleep Problems: Insufficient information to determine the severity of sleep problems
+
+## 6. Summary And Screening Disclaimer
+
+The user has been experiencing a mix of emotions and physical sensations over the past two weeks, including feelings of frustration, restlessness, and low energy. They have been dealing with difficult situations, such as conflicts with roommates and struggles to find a job, which may be contributing to their emotional state. The user has also reported getting restless very easily, which could be related to psychomotor changes. However, the user's responses indicate uncertainty about their feelings and experiences, and further clarification is needed to determine the severity of their symptoms.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/331.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:old, gender:male, occupation:realtor
+
+Basic information: Age: unknown, Gender: male, Occupation: realtor
+
+
+--------------------Current Topic: Loss of Interest
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things?
+
+Simulated answer: I'm not sure, but I have been having a tough time lately, especially with the market crashing and not making any money. It's been affecting my mood and motivation.
+Warnings: Potential for external factors to influence symptoms
+Question: Over the past two weeks, have you lost enthusiasm for activities you usually enjoy?
+
+Simulated answer: To be honest, I'm not sure. I've been having a tough time lately, and it's hard to separate how I feel about activities I usually enjoy from the overall stress and frustration I'm experiencing with the market crashing and not making any money. It's possible that my enthusiasm has waned, but I haven't really thought about it in those terms.
+Warnings: Potential for external factors to influence symptoms
+Question: Over the past two weeks, have you found it hard to get motivated for hobbies or tasks?
+
+Simulated answer: I've been having a tough time lately, and it's hard to separate how I feel about hobbies or tasks from the overall stress and frustration I'm experiencing with the market crashing and not making any money. It's possible that I've found it hard to get motivated, but I haven't really thought about it in those terms.
+Warnings: Potential for external factors to influence symptoms
+
+Total score for topic 'Loss of Interest': 1 points
+Scoring basis: The user's responses indicate ongoing uncertainty and potential impact of external factors on their mood and motivation, suggesting a need for further clarification on the presence and severity of loss of interest symptoms.
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: To be honest, I have felt down and depressed, but I'm not sure if it's been over the past two weeks specifically. I do know that I've been feeling depressed all the time and I've been trying to get out and talk to people to deal with it.
+Warnings: Potential for external factors to influence symptoms
+Question: Can you estimate how many days over the past two weeks you have felt down, depressed, or hopeless?
+
+Simulated answer: Honestly, I'm not sure I can give an exact number of days, but I have been feeling down and depressed a lot lately. I know I've been trying to get out and talk to people to deal with it, and I've been worried about many things, which has been making me depressed. However, I don't have a clear count of days over the past two weeks.
+Warnings: Potential for external factors to influence symptoms
+Question: How would you describe the intensity of your feelings of depression over the past two weeks?
+
+Simulated answer: To be honest, I've been feeling depressed all the time, and it's been affecting me a lot. I've been worried about many things, which has been making me depressed. I'd say the intensity of my feelings of depression has been pretty high, but I'm not sure how to quantify it. I've been trying to get out and talk to people to deal with it, and I feel like I'm evolving and can talk my way through my feelings, which is a positive step.
+
+Total score for topic 'Depressed Mood': 3 points
+Scoring basis: The user reports feeling depressed all the time and experiencing high intensity of feelings of depression, indicating a high level of severity.
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about sleep problems over the past two weeks.
+Warnings: Potential for external factors to influence sleep
+Question: Over the past two weeks, have you felt that your sleep was restless or of poor quality?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about my sleep quality over the past two weeks.
+Warnings: Potential for external factors to influence sleep
+Question: Over the past two weeks, have you woken up too early and been unable to fall back asleep?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about waking up too early and being unable to fall back asleep over the past two weeks.
+Warnings: Potential for external factors to influence sleep
+
+Total score for topic 'Sleep Problems': 0 points
+Scoring basis: The user's responses indicate ongoing uncertainty about sleep problems, sleep quality, and sleep disturbances.
+
+
+
+--------------------Current Topic: Fatigue or Low Energy
+Question: Over the past two weeks, have you felt tired or lacked energy?
+
+Simulated answer: I'm not sure, but I have been having a tough time lately, especially with the real estate market crashing and not making any money. It's been stressful, but I don't know if that's exactly the same as feeling tired or lacking energy.
+Warnings: Potential for external factors to influence energy levels
+Question: Over the past two weeks, have you felt exhausted even after resting?
+
+Simulated answer: To be honest, I'm not really sure. I've been stressed out about the real estate market and not making any money, but I don't know if that's the same as feeling exhausted even after resting. I haven't really thought about it that way.
+Warnings: Potential for external factors to influence energy levels
+Question: Over the past two weeks, have you found it hard to carry out tasks due to low energy?
+
+Simulated answer: Honestly, I'm not really sure. I've been stressed out about the real estate market and not making any money, but I don't know if that's the same as having low energy or not. I haven't really thought about it that way.
+Warnings: Potential for external factors to influence energy levels
+
+Total score for topic 'Fatigue or Low Energy': 0 points
+Scoring basis: The user's responses indicate ongoing uncertainty about fatigue or low energy, and the user has not provided enough information to determine the presence and severity of fatigue or low energy.
+
+
+
+--------------------Current Topic: Appetite or Weight Changes
+Question: Over the past two weeks, have you had a poor appetite or been overeating?
+
+Simulated answer: I'm not sure, I haven't really thought about my appetite or eating habits over the past two weeks.
+Warnings: Potential for external factors to influence appetite or eating habits
+Question: Over the past two weeks, have you noticed significant weight loss or gain?
+
+Simulated answer: I haven't really thought about my weight changes over the past two weeks.
+Warnings: Potential for external factors to influence appetite or eating habits
+Question: Over the past two weeks, have your eating habits changed due to your mood?
+
+Simulated answer: I'm not sure, I haven't really thought about how my mood has affected my eating habits over the past two weeks.
+Warnings: Potential for external factors to influence appetite or eating habits
+
+Total score for topic 'Appetite or Weight Changes': 0 points
+Scoring basis: The user's responses indicate ongoing uncertainty about appetite or eating habits, weight changes, and eating habits due to mood, and therefore do not provide enough information to determine the presence and severity of appetite or weight changes.
+
+
+
+--------------------Current Topic: Low Self-Worth
+Question: Over the past two weeks, have you felt bad about yourself or like a failure?
+
+Simulated answer: I've had tough times, like when the market crashed and I wasn't making any money, which made things tough for me as a realtor. I've also talked about evolving and feeling through my emotions, which suggests I've been dealing with some personal struggles. However, I'm not sure if this directly answers your question about the past two weeks.
+Warnings: Potential for external factors to influence feelings of guilt or worthlessness
+Question: Over the past two weeks, have you experienced feelings of guilt or worthlessness?
+
+Simulated answer: I've been dealing with some personal struggles, and I've talked about evolving and feeling through my emotions. However, I'm not sure if this directly answers your question about feelings of guilt or worthlessness over the past two weeks. I did mention that I've had tough times, like when the market crashed and I wasn't making any money, which made things tough for me as a realtor.
+Warnings: Potential for external factors to influence feelings of letting self or others down
+Question: Over the past two weeks, have you felt that you’ve let yourself or others down?
+
+Simulated answer: I've been dealing with some personal struggles and tough times, like when the market crashed and I wasn't making any money as a realtor. I also mentioned that I've let go of drinking because I was doing it for the wrong reasons. This could imply that I've felt like I've let myself down in some way, but I'm not sure if this directly answers your question about the past two weeks.
+Warnings: Potential for external factors to influence feelings of guilt, worthlessness, or letting self or others down
+
+Total score for topic 'Low Self-Worth': 1 points
+Scoring basis: The user's responses indicate that they have experienced tough times and personal struggles, which may be related to feelings of guilt, worthlessness, or letting self or others down. However, the user's answers do not provide enough information to determine the presence and severity of these feelings.
+
+
+
+--------------------Current Topic: Concentration Difficulties
+Question: Over the past two weeks, have you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about having trouble concentrating on tasks like reading or working over the past two weeks.
+Warnings: Potential for external factors to influence concentration difficulties
+Question: Over the past two weeks, have you felt your mind was foggy or unfocused?
+
+Simulated answer: I'm not sure, I haven't mentioned anything about feeling my mind was foggy or unfocused over the past two weeks.
+Warnings: Potential for external factors to influence concentration difficulties
+
+Total score for topic 'Concentration Difficulties': 0 points
+Scoring basis: The user's responses indicate uncertainty about having trouble concentrating on tasks like reading or working, and the user has not provided enough information to determine the presence and severity of concentration difficulties.
+
+
+
+--------------------Current Topic: Psychomotor Changes
+Question: Over the past two weeks, have you felt slowed down in your movements or speech?
+
+Simulated answer: I'm not sure, I haven't really thought about it. I've been dealing with other issues, like not having money and struggling with my behavior when I drink.
+Warnings: Potential for external factors to influence psychomotor changes
+Question: Over the past two weeks, have you been so restless that it’s hard to sit still?
+
+Simulated answer: I'm not sure, I haven't really thought about it. My mind has been preoccupied with other issues, like my financial struggles and my decision to stop drinking.
+Warnings: Potential for external factors to influence psychomotor changes
+
+Total score for topic 'Psychomotor Changes': 0 points
+Scoring basis: The user's responses indicate uncertainty about feeling slowed down in their movements or speech and feeling restless, and therefore do not provide enough information to determine the presence and severity of psychomotor changes.
+
+
+Number of Q&As in this session: 22
+Assessment results saved to /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/tom_llama-33-70b-instruct_results.csv
+
+Automated test completed. Psychological screening report:
+
+# Psychological Scale Assessment Report
+
+## Assessment Scale: PHQ-8
+
+## 1. Scale Results
+
+|   No. | Item                       |   Initial Score |   Final Score |
+|------:|:---------------------------|----------------:|--------------:|
+|     1 | Loss of Interest           |               1 |             1 |
+|     2 | Depressed Mood             |               3 |             3 |
+|     3 | Sleep Problems             |               0 |             0 |
+|     4 | Fatigue or Low Energy      |               0 |             0 |
+|     5 | Appetite or Weight Changes |               0 |             0 |
+|     6 | Low Self-Worth             |               1 |             1 |
+|     7 | Concentration Difficulties |               0 |             0 |
+|     8 | Psychomotor Changes        |               0 |             0 |
+|       | Total Score                |                 |             5 |
+|       | Symptom Level              |                 |             0 |
+
+## 2. Evidence Supporting The Scale Results
+
+- Loss of Interest: The user's responses indicate ongoing uncertainty and potential impact of external factors on their mood and motivation, suggesting a need for further clarification on the presence and severity of loss of interest symptoms.
+- Depressed Mood: The user reports feeling depressed all the time and experiencing high intensity of feelings of depression, indicating a high level of severity.
+- Sleep Problems: The user's responses indicate ongoing uncertainty about sleep problems, sleep quality, and sleep disturbances.
+- Fatigue or Low Energy: The user's responses indicate ongoing uncertainty about fatigue or low energy, and the user has not provided enough information to determine the presence and severity of fatigue or low energy.
+- Appetite or Weight Changes: The user's responses indicate ongoing uncertainty about appetite or eating habits, weight changes, and eating habits due to mood, and therefore do not provide enough information to determine the presence and severity of appetite or weight changes.
+- Low Self-Worth: The user's responses indicate that they have experienced tough times and personal struggles, which may be related to feelings of guilt, worthlessness, or letting self or others down. However, the user's answers do not provide enough information to determine the presence and severity of these feelings.
+- Concentration Difficulties: The user's responses indicate uncertainty about having trouble concentrating on tasks like reading or working, and the user has not provided enough information to determine the presence and severity of concentration difficulties.
+- Psychomotor Changes: The user's responses indicate uncertainty about feeling slowed down in their movements or speech and feeling restless, and therefore do not provide enough information to determine the presence and severity of psychomotor changes.
+
+## 3. Contextual And Interpersonal Observations
+
+- Loss of Interest: note -> User reports having a tough time lately
+- Loss of Interest: note -> Market crashing and not making money affecting mood and motivation
+- Loss of Interest: note -> User reports uncertainty about enthusiasm for activities
+- Loss of Interest: note -> Potential impact of external factors on mood and motivation
+- Loss of Interest: note -> User reports having a tough time lately
+- Loss of Interest: note -> Market crashing and not making money affecting mood and motivation
+- Loss of Interest: note -> User reports uncertainty about enthusiasm for activities
+- Loss of Interest: note -> Potential impact of external factors on mood and motivation
+- Depressed Mood: note -> User reports feeling down and depressed
+- Depressed Mood: note -> User reports feeling down and depressed a lot lately
+- Depressed Mood: note -> User reports feeling depressed all the time
+- Depressed Mood: note -> User reports high intensity of feelings of depression
+- Sleep Problems: note -> User reports uncertainty about sleep problems
+- Sleep Problems: note -> User reports uncertainty about sleep quality
+- Sleep Problems: note -> User reports uncertainty about sleep problems
+- Sleep Problems: note -> User reports uncertainty about sleep quality
+- Sleep Problems: note -> User reports uncertainty about sleep disturbances
+- Fatigue or Low Energy: note -> User reports uncertainty about feeling tired or lacking energy
+- Fatigue or Low Energy: note -> User reports uncertainty about feeling exhausted even after resting
+- Fatigue or Low Energy: note -> User reports uncertainty about feeling tired or lacking energy
+- Fatigue or Low Energy: note -> User reports uncertainty about feeling exhausted even after resting
+- Fatigue or Low Energy: note -> User reports uncertainty about impact of low energy on tasks
+- Fatigue or Low Energy: note -> User reports uncertainty about feeling tired or lacking energy
+- Fatigue or Low Energy: note -> User reports uncertainty about feeling exhausted even after resting
+- Fatigue or Low Energy: note -> User reports uncertainty about impact of low energy on tasks
+- Appetite or Weight Changes: note -> User reports uncertainty about appetite or eating habits
+- Appetite or Weight Changes: note -> User reports uncertainty about weight changes
+- Appetite or Weight Changes: note -> User reports uncertainty about appetite or eating habits
+- Appetite or Weight Changes: note -> User reports uncertainty about weight changes
+- Appetite or Weight Changes: note -> User reports uncertainty about eating habits due to mood
+- Appetite or Weight Changes: note -> User reports uncertainty about appetite or eating habits
+- Appetite or Weight Changes: note -> User reports uncertainty about weight changes
+- Appetite or Weight Changes: note -> User reports uncertainty about eating habits due to mood
+- Low Self-Worth: note -> User reports experiencing tough times and personal struggles
+- Low Self-Worth: note -> User reports experiencing tough times and personal struggles
+- Low Self-Worth: note -> User reports experiencing tough times and personal struggles
+- Concentration Difficulties: note -> User reports uncertainty about having trouble concentrating on tasks like reading or working
+- Concentration Difficulties: note -> User reports uncertainty about having trouble concentrating on tasks like reading or working
+- Concentration Difficulties: note -> User reports uncertainty about having trouble concentrating on tasks like reading or working
+- Psychomotor Changes: note -> User reports uncertainty about feeling slowed down in their movements or speech
+- Psychomotor Changes: note -> User reports uncertainty about feeling restless
+- Psychomotor Changes: note -> User reports uncertainty about feeling slowed down in their movements or speech
+- Psychomotor Changes: note -> User reports uncertainty about feeling restless
+
+## 4. ToM-Related Observations
+
+Insufficient evidence for stable ToM-related observations.
+
+## 5. Uncertainty And Unresolved Information
+
+- Loss of Interest: Potential for external factors to influence symptoms
+- Loss of Interest: Potential for external factors to influence symptoms
+- Loss of Interest: Potential for external factors to influence symptoms
+- Depressed Mood: Potential for external factors to influence symptoms
+- Depressed Mood: Potential for external factors to influence symptoms
+- Sleep Problems: Potential for external factors to influence sleep
+- Sleep Problems: Potential for external factors to influence sleep
+- Sleep Problems: Potential for external factors to influence sleep
+- Fatigue or Low Energy: scoring confidence was low (0.4).
+- Fatigue or Low Energy: Potential for external factors to influence energy levels
+- Fatigue or Low Energy: Potential for external factors to influence energy levels
+- Fatigue or Low Energy: Potential for external factors to influence energy levels
+- Appetite or Weight Changes: Potential for external factors to influence appetite or eating habits
+- Appetite or Weight Changes: Potential for external factors to influence appetite or eating habits
+- Appetite or Weight Changes: Potential for external factors to influence appetite or eating habits
+- Low Self-Worth: Potential for external factors to influence feelings of guilt or worthlessness
+- Low Self-Worth: Potential for external factors to influence feelings of letting self or others down
+- Low Self-Worth: Potential for external factors to influence feelings of guilt, worthlessness, or letting self or others down
+- Concentration Difficulties: scoring confidence was low (0.4).
+- Concentration Difficulties: Potential for external factors to influence concentration difficulties
+- Concentration Difficulties: Potential for external factors to influence concentration difficulties
+- Psychomotor Changes: scoring confidence was low (0.4).
+- Psychomotor Changes: Potential for external factors to influence psychomotor changes
+- Psychomotor Changes: Potential for external factors to influence psychomotor changes
+
+## 6. Summary And Screening Disclaimer
+
+The user has reported experiencing tough times and personal struggles, which may be related to feelings of guilt, worthlessness, or letting self or others down. However, the user's answers do not provide enough information to determine the presence and severity of these feelings. The user has also reported feeling depressed all the time and experiencing high intensity of feelings of depression, indicating a high level of severity. Additionally, the user has reported uncertainty about having trouble concentrating on tasks like reading or working, and feeling slowed down in their movements or speech, but has not provided enough information to determine the presence and severity of these symptoms.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/335.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:young adult, gender:female, occupation:performing artist
+
+Basic information: Age: unknown, Gender: female, Occupation: adult
+
+
+--------------------Current Topic: Loss of Interest
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things?
+
+Simulated answer: I'm not really sure, I mean I just finished a tour a couple months ago and I've been performing for kids, which I usually enjoy, but I don't know if I've felt little interest or pleasure in doing things over the past two weeks specifically.
+Question: Over the past two weeks, have you lost enthusiasm for activities you usually enjoy?
+
+Simulated answer: I'm not really sure, I mean I usually enjoy singing and performing, but I don't know if I've lost enthusiasm for those activities over the past two weeks specifically.
+Question: Over the past two weeks, have you found it hard to get motivated for hobbies or tasks?
+
+Simulated answer: I'm not really sure, I mean I usually enjoy singing and performing, but I don't know if I've had trouble getting motivated for those things over the past two weeks specifically.
+Warnings: Insufficient information to determine symptom presence or severity
+
+Total score for topic 'Loss of Interest': 0 points
+Scoring basis: Insufficient information to determine symptom presence or severity
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: I'm not sure, I haven't really talked about feeling down, depressed, or hopeless recently. Sometimes my work can be relaxing, like singing, but that's about all I can say about my feelings lately.
+Question: Over the past two weeks, have you experienced persistent sadness?
+
+Simulated answer: I'm still not sure, I haven't really talked about feeling down, depressed, or hopeless recently. Sometimes my work can be relaxing, like singing, but that's about all I can say about my feelings lately. I don't have any new information to add to what I said before.
+Question: Over the past two weeks, have you struggled to feel optimistic or upbeat?
+
+Simulated answer: I haven't really talked about feeling optimistic or upbeat recently. Sometimes my work can be relaxing, like singing, but that's about all I can say about my feelings lately. I don't have any new information to add to what I said before.
+Warnings: Topic has reached soft maximum number of questions
+
+Total score for topic 'Depressed Mood': 0 points
+Scoring basis: Insufficient information to determine symptom presence or severity
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: I'm not sure if I've had trouble falling or staying asleep over the past two weeks. The conversation didn't discuss my sleep patterns recently.
+Question: Over the past two weeks, have you felt that your sleep was restless or of poor quality?
+
+Simulated answer: I'm not sure if I've felt that my sleep was restless or of poor quality over the past two weeks. The conversation didn't discuss my sleep patterns recently.
+Question: Over the past two weeks, have you woken up too early and been unable to fall back asleep?
+
+Simulated answer: I'm not sure if I've woken up too early and been unable to fall back asleep over the past two weeks. The conversation didn't discuss my sleep patterns recently.
+
+Total score for topic 'Sleep Problems': 0 points
+Scoring basis: Insufficient information to determine symptom presence or severity
+
+
+
+--------------------Current Topic: Fatigue or Low Energy
+Question: Over the past two weeks, have you felt tired or lacked energy?
+
+Simulated answer: I've felt tired and maybe somewhat irritable, I get really goofy when I'm tired. However, I'm not sure how often I've felt this way over the past two weeks.
+Question: Over the past two weeks, have you felt exhausted even after resting?
+
+Simulated answer: I've felt tired and maybe somewhat irritable, I get really goofy when I'm tired. However, I'm not sure if this is the same as feeling exhausted even after resting, as I haven't specifically thought about how I feel after resting.
+Question: Over the past two weeks, have you found it hard to carry out tasks due to low energy?
+
+Simulated answer: I've felt tired and maybe somewhat irritable, I get really goofy when I'm tired. However, I'm not sure if this has made it hard for me to carry out tasks due to low energy. I do know that sometimes my work can be very relaxing, like singing a song, but I'm unsure how my energy levels have affected my ability to carry out tasks over the past two weeks.
+Warnings: Topic has reached the soft maximum number of questions
+
+Total score for topic 'Fatigue or Low Energy': 1 points
+Scoring basis: The user has reported feeling tired and irritable, but is uncertain about the frequency and impact of fatigue on their daily life.
+
+
+
+--------------------Current Topic: Appetite or Weight Changes
+Question: Over the past two weeks, have you had a poor appetite or been overeating?
+
+Simulated answer: I haven't mentioned anything about my appetite or eating habits over the past two weeks, so I'm not sure how to answer that.
+Question: Over the past two weeks, have you noticed significant weight loss or gain?
+
+Simulated answer: I haven't mentioned anything about my weight over the past two weeks, so I'm not sure how to answer that.
+Question: Over the past two weeks, have your eating habits changed due to your mood?
+
+Simulated answer: I haven't mentioned anything about my eating habits changing due to my mood over the past two weeks, so I'm not sure how to answer that.
+
+Total score for topic 'Appetite or Weight Changes': 0 points
+Scoring basis: Insufficient information to determine symptom presence or severity
+
+
+
+--------------------Current Topic: Low Self-Worth
+Question: Over the past two weeks, have you felt bad about yourself or like a failure?
+
+Simulated answer: I've been having bad dreams, but I'm not sure if that's related to feeling bad about myself. I do try to stand up for myself, though.
+Question: Over the past two weeks, have you experienced feelings of guilt or worthlessness?
+
+Simulated answer: I've been having bad dreams, but I'm not sure if that's related to feeling guilty or worthless. I try to stand up for myself, though.
+Question: Over the past two weeks, have you felt that you’ve let yourself or others down?
+
+Simulated answer: I'm not sure if I've felt like I've let myself or others down over the past two weeks. I've been having bad dreams, but I don't know if that's related to feeling like I've let someone down. I try to stand up for myself, though.
+
+Total score for topic 'Low Self-Worth': 1 points
+Scoring basis: The user's responses have consistently indicated uncertainty about their feelings of low self-worth, but the presence of bad dreams and uncertainty about their feelings suggests some level of distress.
+
+
+
+--------------------Current Topic: Concentration Difficulties
+Question: Over the past two weeks, have you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not sure, I haven't really talked about that.
+Question: Over the past two weeks, have you felt your mind was foggy or unfocused?
+
+Simulated answer: I'm not sure, I haven't really talked about that.
+Warnings: low_information_gain
+
+Total score for topic 'Concentration Difficulties': 0 points
+Scoring basis: Insufficient information to determine symptom presence or severity
+
+
+
+--------------------Current Topic: Psychomotor Changes
+Question: Over the past two weeks, have you felt slowed down in your movements or speech?
+
+Simulated answer: I haven't mentioned feeling slowed down in my movements or speech over the past two weeks. My recent activities, like finishing a tour a couple months ago and performing for kids, don't indicate any issues with slowed movements or speech.
+Question: Over the past two weeks, have you been so restless that it’s hard to sit still?
+
+Simulated answer: I haven't mentioned being restless or having trouble sitting still over the past two weeks. My recent activities, like finishing a tour and performing, don't indicate any issues with restlessness.
+
+Total score for topic 'Psychomotor Changes': 0 points
+Scoring basis: The user's responses indicate no issues with slowed movements or speech and no restlessness or issues with sitting still over the past two weeks.
+
+
+Number of Q&As in this session: 22
+Assessment results saved to /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/tom_llama-33-70b-instruct_results.csv
+
+Automated test completed. Psychological screening report:
+
+# Psychological Scale Assessment Report
+
+## Assessment Scale: PHQ-8
+
+## 1. Scale Results
+
+|   No. | Item                       |   Initial Score |   Final Score |
+|------:|:---------------------------|----------------:|--------------:|
+|     1 | Loss of Interest           |               0 |             0 |
+|     2 | Depressed Mood             |               0 |             0 |
+|     3 | Sleep Problems             |               0 |             0 |
+|     4 | Fatigue or Low Energy      |               1 |             1 |
+|     5 | Appetite or Weight Changes |               0 |             0 |
+|     6 | Low Self-Worth             |               1 |             1 |
+|     7 | Concentration Difficulties |               0 |             0 |
+|     8 | Psychomotor Changes        |               0 |             0 |
+|       | Total Score                |                 |             2 |
+|       | Symptom Level              |                 |             0 |
+
+## 2. Evidence Supporting The Scale Results
+
+- Loss of Interest: Insufficient information to determine symptom presence or severity
+- Depressed Mood: Insufficient information to determine symptom presence or severity
+- Sleep Problems: Insufficient information to determine symptom presence or severity
+- Fatigue or Low Energy: The user has reported feeling tired and irritable, but is uncertain about the frequency and impact of fatigue on their daily life.
+- Appetite or Weight Changes: Insufficient information to determine symptom presence or severity
+- Low Self-Worth: The user's responses have consistently indicated uncertainty about their feelings of low self-worth, but the presence of bad dreams and uncertainty about their feelings suggests some level of distress.
+- Concentration Difficulties: Insufficient information to determine symptom presence or severity
+- Psychomotor Changes: The user's responses indicate no issues with slowed movements or speech and no restlessness or issues with sitting still over the past two weeks.
+
+## 3. Contextual And Interpersonal Observations
+
+- Loss of Interest: note -> The user's responses have consistently indicated uncertainty about their level of interest or pleasure in activities over the past two weeks.
+- Depressed Mood: note -> The user's responses have consistently indicated uncertainty about their feelings of depression or hopelessness.
+- Depressed Mood: note -> The topic has reached the soft maximum number of questions.
+- Fatigue or Low Energy: unknown -> unspecified observation
+- Fatigue or Low Energy: unknown -> unspecified observation
+- Fatigue or Low Energy: unknown -> unspecified observation
+- Appetite or Weight Changes: note -> The user's responses have consistently indicated uncertainty about their appetite or eating habits.
+- Appetite or Weight Changes: note -> The user's responses have consistently indicated uncertainty about their weight.
+- Appetite or Weight Changes: note -> The user's responses have consistently indicated uncertainty about their eating habits changing due to their mood.
+- Low Self-Worth: note -> The user's responses have consistently indicated uncertainty about their feelings of depression or hopelessness.
+- Low Self-Worth: note -> The topic has reached the soft maximum number of questions, limiting further exploration of the user's feelings.
+- Concentration Difficulties: note -> The user's responses have consistently indicated uncertainty about their concentration difficulties.
+- Psychomotor Changes: note -> No slowed down movements or speech
+- Psychomotor Changes: note -> No restlessness or issues with sitting still
+- Psychomotor Changes: note -> The user's responses have consistently indicated uncertainty about their appetite or eating habits.
+- Psychomotor Changes: note -> The user's responses have consistently indicated uncertainty about their weight.
+- Psychomotor Changes: note -> The user's responses have consistently indicated uncertainty about their eating habits changing due to their mood.
+- Psychomotor Changes: note -> The user's responses have consistently indicated uncertainty about their feelings of depression or hopelessness.
+- Psychomotor Changes: note -> The topic has reached the soft maximum number of questions, limiting further exploration of the user's feelings.
+- Psychomotor Changes: note -> The user's responses have consistently indicated uncertainty about their concentration difficulties.
+
+## 4. ToM-Related Observations
+
+Insufficient evidence for stable ToM-related observations.
+
+## 5. Uncertainty And Unresolved Information
+
+- Loss of Interest: Insufficient information to determine symptom presence or severity
+- Depressed Mood: Topic has reached soft maximum number of questions
+- Fatigue or Low Energy: Topic has reached the soft maximum number of questions
+- Concentration Difficulties: low_information_gain
+
+## 6. Summary And Screening Disclaimer
+
+The user has reported feeling tired and irritable, but is uncertain about the frequency and impact of fatigue on their daily life. The user's responses have consistently indicated uncertainty about their feelings of low self-worth, but the presence of bad dreams and uncertainty about their feelings suggests some level of distress. The user's responses indicate no issues with slowed movements or speech and no restlessness or issues with sitting still over the past two weeks.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/346.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:young adult, gender:female, occupation:pharmacy student or pharmacist
+
+Basic information: Age: unknown, Gender: female, Occupation: adult
+
+
+--------------------Current Topic: Loss of Interest
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things?
+
+Simulated answer: I'm a little depressed, so yeah, I'd say I have felt little interest or pleasure in doing things over the past two weeks. I do a lot of sleeping and it's hard for me to relax.
+Warnings: User's depression might influence their perception of interest and pleasure
+Question: Can you tell me more about how long you've been feeling this way? Has it been for the entire two weeks, or have there been some days where you felt more interested or pleased in doing things?
+
+Simulated answer: To be honest, I'm not really sure about the exact days, but I've been feeling this way for a while now. It's hard for me to relax and I sleep a lot, which makes it difficult to keep track of time or find interest in things. I do know that it's been really tough for me to feel motivated or pleased about doing things over the past two weeks.
+Warnings: User's depression might influence their perception of interest and pleasure
+Question: How have you been managing your daily activities and responsibilities over the past two weeks? Have you had to make any changes or adjustments due to your lack of interest or motivation?
+
+Simulated answer: To be honest, managing daily activities and responsibilities has been really tough for me over the past two weeks. I've been feeling a little depressed and have had difficulty relaxing, which makes it hard to find interest or pleasure in doing things. I sleep a lot, and that doesn't help with keeping track of time or staying motivated. I haven't really made any specific changes or adjustments, but it's been a struggle to get motivated for hobbies or tasks. I'm not really sure how I've been getting things done, to be honest.
+Warnings: User's depression might influence their perception of interest and pleasure
+Question: How has your loss of interest affected your relationships with family and friends over the past two weeks?
+
+Simulated answer: To be honest, I haven't really thought about how my loss of interest has affected my relationships with family and friends over the past two weeks. I do know that I have somebody in my life who really loves me and is there for me, and that's been helpful. However, I'm not really sure how my loss of interest has impacted those relationships specifically.
+Warnings: User's depression might influence their perception of interest and pleasure
+
+Total score for topic 'Loss of Interest': 2 points
+Scoring basis: The user reports feeling little interest or pleasure in doing things over the past two weeks, has difficulty relaxing and sleeps a lot, and has been struggling to feel motivated or pleased about doing things.
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: Yes, I have felt down, depressed, or hopeless over the past two weeks. I've been really depressed and feel gloomy and miserable about a lot of things.
+Warnings: User's depression might influence their perception of their mood
+Question: Can you tell me more about how often you've been feeling down, depressed, or hopeless over the past two weeks?
+
+Simulated answer: I've been feeling down, depressed, or hopeless, but I'm not sure how often exactly over the past two weeks. I know I've been really depressed and feel gloomy and miserable about a lot of things. I also do a lot of sleeping and feel miserable, which might be related to my depression.
+Warnings: User's depression might influence their perception of their mood
+Question: How have you been managing your daily activities and responsibilities over the past two weeks?
+
+Simulated answer: To be honest, I've been struggling to manage my daily activities and responsibilities over the past two weeks. I've been doing a lot of sleeping, which is probably a sign of my depression. I feel miserable and gloomy, and it's hard for me to find the motivation to do things. I don't have much information about how my daily activities have been specifically affected, but I know I've been feeling really down and depressed.
+Warnings: User's depression might influence their perception of their mood
+Question: Can you estimate how many days over the past two weeks you've been feeling down, depressed, or hopeless?
+
+Simulated answer: I'm not sure exactly how many days I've been feeling down, depressed, or hopeless over the past two weeks. I know I've been really depressed and feel gloomy and miserable about a lot of things, and I've been doing a lot of sleeping, which might be related to my depression. However, I don't have a specific count of days.
+Warnings: User's depression might influence their perception of their mood
+
+Total score for topic 'Depressed Mood': 2 points
+Scoring basis: The user reports feeling down, depressed, or hopeless over the past two weeks, has been doing a lot of sleeping, and feels miserable, which might be related to their depression. Although the user is unsure of the exact duration, their symptoms and impact on daily life suggest a score of 2, indicating they have been bothered by feeling down, depressed, or hopeless for more than half the days over the past two weeks.
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: Yeah, I don't sleep very well at night and if I do fall asleep, I wake up all through the night usually with some kind of anxiety attacks.
+Warnings: User's sleep problems might be related to their depression or anxiety
+Question: Over the past two weeks, have you felt that your sleep was restless or of poor quality?
+
+Simulated answer: Yeah, I don't sleep very well at night and if I do fall asleep, I wake up all through the night usually with some kind of anxiety attacks. That sounds like restless or poor quality sleep to me.
+Warnings: User's sleep problems might be related to their depression or anxiety
+Question: Over the past two weeks, have you woken up too early and been unable to fall back asleep?
+
+Simulated answer: I don't sleep very well at night and if I do fall asleep, I wake up all through the night usually with some kind of anxiety attacks. However, I'm not sure if I've been waking up too early and been unable to fall back asleep specifically.
+Warnings: User's sleep problems might be related to their depression or anxiety
+
+Total score for topic 'Sleep Problems': 2 points
+Scoring basis: The user reports trouble falling or staying asleep and waking up with anxiety attacks, and has also indicated that their sleep is restless or of poor quality.
+
+
+
+--------------------Current Topic: Fatigue or Low Energy
+Question: Over the past two weeks, have you felt tired or lacked energy?
+
+Simulated answer: I have felt tired. I was tired, it was late, and I try to get myself as exhausted as I possibly can so I don't dwell on the fact that I couldn't sleep.
+Warnings: User's fatigue might be related to their sleep problems or depression
+Question: Over the past two weeks, have you felt exhausted even after resting?
+
+Simulated answer: I've felt tired and tried to exhaust myself so I don't dwell on not being able to sleep, but I'm not sure if that's the same as feeling exhausted after resting.
+Warnings: User's fatigue might be related to their sleep problems or depression
+Question: Over the past two weeks, have you found it hard to carry out tasks due to low energy?
+
+Simulated answer: I have felt tired and it's been hard for me to relax, which might make it difficult to carry out tasks due to low energy, but I'm not sure how often this has happened over the past two weeks.
+Warnings: User's fatigue might be related to their sleep problems or depression
+
+Total score for topic 'Fatigue or Low Energy': 2 points
+Scoring basis: The user has reported feeling tired and lacking energy, and has also mentioned trying to get themselves exhausted to avoid dwelling on their sleep problems. Although the user is unsure about the exact duration of their fatigue, their symptoms and impact on daily life suggest that it's essential to consider the scoring standard for fatigue. Given the user's reports of feeling tired and lacking energy, and the impact on their daily activities, a score of 2 is appropriate, indicating that the user has been bothered by feeling tired or having little energy for more than half the days over the past two weeks.
+
+
+
+--------------------Current Topic: Appetite or Weight Changes
+Question: Over the past two weeks, have you had a poor appetite or been overeating?
+
+Simulated answer: I'm not sure if I've had a poor appetite or been overeating over the past two weeks. I don't recall discussing my eating habits or appetite recently.
+Warnings: User's uncertainty about appetite or eating habits may indicate a need for further assessment
+Question: Over the past two weeks, have you noticed significant weight loss or gain?
+
+Simulated answer: I haven't noticed any significant weight loss or gain over the past two weeks, but I'm not really sure. I don't recall discussing my weight or any changes to it recently.
+Warnings: User's uncertainty about appetite or eating habits and weight changes may indicate a need for further assessment
+Question: Over the past two weeks, have your eating habits changed due to your mood?
+
+Simulated answer: I'm not sure if my eating habits have changed due to my mood over the past two weeks. I don't recall discussing my eating habits or mood recently.
+Warnings: User's uncertainty about appetite or eating habits, weight changes, and eating habits due to mood may indicate a need for further assessment
+
+Total score for topic 'Appetite or Weight Changes': 0 points
+Scoring basis: The user has expressed uncertainty about their appetite or eating habits, weight changes, and eating habits due to mood over the past two weeks.
+
+
+
+--------------------Current Topic: Low Self-Worth
+Question: Over the past two weeks, have you felt bad about yourself or like a failure?
+
+Simulated answer: I've had a lot of bad things happen to me, but I try not to be negative towards other people. I've been diagnosed with some issues, and I have a bad temper. Sometimes I feel disheartened and mad because people can't just let others live their lives without trying to bring them down. However, I'm not sure if I've specifically felt bad about myself or like a failure over the past two weeks.
+Warnings: User's uncertainty about feeling bad about themselves or like a failure may indicate a need for further assessment
+Question: Over the past two weeks, have you experienced feelings of guilt or worthlessness?
+
+Simulated answer: I'm not sure if I've experienced feelings of guilt or worthlessness over the past two weeks. I've had a lot of bad things happen to me, and I try not to be negative towards other people. Sometimes I feel disheartened and mad because people can't just let others live their lives without trying to bring them down. However, I don't recall specifically feeling guilty or worthless during this time.
+
+Total score for topic 'Low Self-Worth': 1 points
+Scoring basis: The user has expressed uncertainty about feeling bad about themselves or like a failure, and also uncertainty about experiencing feelings of guilt or worthlessness. Given the user's responses, it's challenging to determine the severity of their low self-worth. However, considering the scoring standard and the user's reports of feeling disheartened and mad, a score of 1 is appropriate, indicating that the user has been bothered by feeling bad about themselves or like a failure for several days over the past two weeks.
+
+
+
+--------------------Current Topic: Concentration Difficulties
+Question: Over the past two weeks, have you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not really sure, I do spend a lot of my time reading and sometimes it puts me in a good mood, but I haven't mentioned having trouble concentrating over the past two weeks specifically.
+Warnings: User's uncertainty about having trouble concentrating on tasks like reading or working may indicate a need for further assessment
+Question: Over the past two weeks, have you felt your mind was foggy or unfocused?
+
+Simulated answer: I'm not really sure, I haven't mentioned feeling like my mind was foggy or unfocused over the past two weeks specifically.
+Warnings: User's uncertainty about having trouble concentrating on tasks like reading or working and feeling mind fog or unfocused thoughts may indicate a need for further assessment
+
+Total score for topic 'Concentration Difficulties': 1 points
+Scoring basis: The user has expressed uncertainty about having trouble concentrating on tasks like reading or working and feeling mind fog or unfocused thoughts over the past two weeks. Given the user's uncertainty and the limited information gathered, it's challenging to determine the severity of their concentration difficulties. However, considering the scoring standard and the user's reports, a score of 1 is appropriate, indicating that the user has been bothered by trouble concentrating on things like reading or watching TV for several days over the past two weeks.
+
+
+
+--------------------Current Topic: Psychomotor Changes
+Question: Over the past two weeks, have you felt slowed down in your movements or speech?
+
+Simulated answer: I'm not sure if I've felt slowed down in my movements or speech over the past two weeks. I do have trouble relaxing and I try to keep myself exhausted so I can sleep, but I don't know if that's related to feeling slowed down.
+Warnings: User's uncertainty about feeling slowed down in movements or speech may indicate a need for further assessment
+Question: Over the past two weeks, have you been so restless that it’s hard to sit still?
+
+Simulated answer: I have trouble relaxing and it's hard for me to sit still, but I'm not sure if that's exactly what you mean by restlessness. I try to keep myself exhausted so I can sleep, and I've been having a hard time relaxing, even when I'm watching TV.
+Warnings: User's uncertainty about feeling slowed down in movements or speech may indicate a need for further assessment
+Question: Over the past two weeks, have you noticed agitation or sluggishness in your behavior?
+
+Simulated answer: I've had trouble relaxing and it's hard for me to sit still, which might be related to agitation or sluggishness. Over the past two weeks, I've been trying to keep myself exhausted so I can sleep, and even watching TV doesn't help me relax. I'm not sure if that's exactly what you mean by agitation or sluggishness, but it's been a challenge for me.
+
+Total score for topic 'Psychomotor Changes': 1 points
+Scoring basis: The user has reported having trouble relaxing and trying to keep themselves exhausted to sleep, which may indicate some level of restlessness or agitation. However, the user's response also suggests that they may be experiencing some level of sluggishness, as they mentioned having a hard time relaxing even when watching TV. Given the user's uncertainty and the limited information gathered, it's challenging to determine the severity of their psychomotor changes. However, considering the scoring standard and the user's reports, a score of 1 is appropriate, indicating that the user has been bothered by moving or speaking slowly, or being fidgety or restless for several days over the past two weeks.
+
+
+Number of Q&As in this session: 24
+Assessment results saved to /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/tom_llama-33-70b-instruct_results.csv
+
+Automated test completed. Psychological screening report:
+
+# Psychological Scale Assessment Report
+
+## Assessment Scale: PHQ-8
+
+## 1. Scale Results
+
+|   No. | Item                       |   Initial Score |   Final Score |
+|------:|:---------------------------|----------------:|--------------:|
+|     1 | Loss of Interest           |               2 |             2 |
+|     2 | Depressed Mood             |               2 |             2 |
+|     3 | Sleep Problems             |               2 |             2 |
+|     4 | Fatigue or Low Energy      |               2 |             2 |
+|     5 | Appetite or Weight Changes |               0 |             0 |
+|     6 | Low Self-Worth             |               1 |             1 |
+|     7 | Concentration Difficulties |               1 |             1 |
+|     8 | Psychomotor Changes        |               1 |             1 |
+|       | Total Score                |                 |            11 |
+|       | Symptom Level              |                 |             1 |
+
+## 2. Evidence Supporting The Scale Results
+
+- Loss of Interest: The user reports feeling little interest or pleasure in doing things over the past two weeks, has difficulty relaxing and sleeps a lot, and has been struggling to feel motivated or pleased about doing things.
+- Depressed Mood: The user reports feeling down, depressed, or hopeless over the past two weeks, has been doing a lot of sleeping, and feels miserable, which might be related to their depression. Although the user is unsure of the exact duration, their symptoms and impact on daily life suggest a score of 2, indicating they have been bothered by feeling down, depressed, or hopeless for more than half the days over the past two weeks.
+- Sleep Problems: The user reports trouble falling or staying asleep and waking up with anxiety attacks, and has also indicated that their sleep is restless or of poor quality.
+- Fatigue or Low Energy: The user has reported feeling tired and lacking energy, and has also mentioned trying to get themselves exhausted to avoid dwelling on their sleep problems. Although the user is unsure about the exact duration of their fatigue, their symptoms and impact on daily life suggest that it's essential to consider the scoring standard for fatigue. Given the user's reports of feeling tired and lacking energy, and the impact on their daily activities, a score of 2 is appropriate, indicating that the user has been bothered by feeling tired or having little energy for more than half the days over the past two weeks.
+- Appetite or Weight Changes: The user has expressed uncertainty about their appetite or eating habits, weight changes, and eating habits due to mood over the past two weeks.
+- Low Self-Worth: The user has expressed uncertainty about feeling bad about themselves or like a failure, and also uncertainty about experiencing feelings of guilt or worthlessness. Given the user's responses, it's challenging to determine the severity of their low self-worth. However, considering the scoring standard and the user's reports of feeling disheartened and mad, a score of 1 is appropriate, indicating that the user has been bothered by feeling bad about themselves or like a failure for several days over the past two weeks.
+- Concentration Difficulties: The user has expressed uncertainty about having trouble concentrating on tasks like reading or working and feeling mind fog or unfocused thoughts over the past two weeks. Given the user's uncertainty and the limited information gathered, it's challenging to determine the severity of their concentration difficulties. However, considering the scoring standard and the user's reports, a score of 1 is appropriate, indicating that the user has been bothered by trouble concentrating on things like reading or watching TV for several days over the past two weeks.
+- Psychomotor Changes: The user has reported having trouble relaxing and trying to keep themselves exhausted to sleep, which may indicate some level of restlessness or agitation. However, the user's response also suggests that they may be experiencing some level of sluggishness, as they mentioned having a hard time relaxing even when watching TV. Given the user's uncertainty and the limited information gathered, it's challenging to determine the severity of their psychomotor changes. However, considering the scoring standard and the user's reports, a score of 1 is appropriate, indicating that the user has been bothered by moving or speaking slowly, or being fidgety or restless for several days over the past two weeks.
+
+## 3. Contextual And Interpersonal Observations
+
+- Loss of Interest: note -> User reports feeling little interest or pleasure
+- Loss of Interest: note -> User mentions being a little depressed
+- Loss of Interest: note -> User has difficulty relaxing and sleeps a lot
+- Loss of Interest: note -> User reports difficulty in keeping track of time due to sleeping a lot
+- Loss of Interest: note -> User mentions it's been tough to feel motivated or pleased about doing things over the past two weeks
+- Loss of Interest: note -> User reports difficulty in managing daily activities and responsibilities
+- Loss of Interest: note -> User mentions struggling to get motivated for hobbies or tasks
+- Loss of Interest: note -> User reports feeling little interest or pleasure
+- Loss of Interest: note -> User mentions being a little depressed
+- Loss of Interest: note -> User has difficulty relaxing and sleeps a lot
+- Loss of Interest: note -> User reports difficulty in managing daily activities and responsibilities
+- Loss of Interest: note -> User mentions struggling to get motivated for hobbies or tasks
+- Depressed Mood: note -> User reports feeling down, depressed, or hopeless over the past two weeks
+- Depressed Mood: note -> User reports feeling down, depressed, or hopeless over the past two weeks
+- Depressed Mood: note -> User mentions doing a lot of sleeping and feeling miserable, which might be related to their depression
+- Depressed Mood: note -> User reports struggling to manage daily activities and responsibilities
+- Depressed Mood: note -> User mentions doing a lot of sleeping and feeling miserable, which might be related to their depression
+- Depressed Mood: note -> User reports feeling down, depressed, or hopeless over the past two weeks
+- Depressed Mood: note -> User mentions doing a lot of sleeping and feeling miserable, which might be related to their depression
+- Sleep Problems: note -> User reports trouble falling or staying asleep
+- Sleep Problems: note -> User reports trouble falling or staying asleep
+- Sleep Problems: note -> User reports restless or poor quality sleep
+- Sleep Problems: note -> User reports trouble falling or staying asleep
+- Sleep Problems: note -> User reports restless or poor quality sleep
+- Fatigue or Low Energy: note -> User reports feeling tired and lacking energy
+- Fatigue or Low Energy: note -> User reports feeling tired and lacking energy
+- Fatigue or Low Energy: note -> User reports feeling tired and lacking energy
+- Appetite or Weight Changes: note -> User reports uncertainty about appetite or eating habits
+- Appetite or Weight Changes: note -> User reports uncertainty about appetite or eating habits
+- Appetite or Weight Changes: note -> User reports uncertainty about weight changes
+- Appetite or Weight Changes: note -> User reports uncertainty about appetite or eating habits
+- Appetite or Weight Changes: note -> User reports uncertainty about weight changes
+- Appetite or Weight Changes: note -> User reports uncertainty about eating habits due to mood
+- Appetite or Weight Changes: note -> User reports uncertainty about appetite or eating habits
+- Appetite or Weight Changes: note -> User reports uncertainty about weight changes
+- Appetite or Weight Changes: note -> User reports uncertainty about eating habits due to mood
+- Low Self-Worth: note -> User reports uncertainty about feeling bad about themselves or like a failure
+- Low Self-Worth: note -> User reports uncertainty about feeling bad about themselves or like a failure
+- Low Self-Worth: note -> User reports uncertainty about experiencing feelings of guilt or worthlessness
+- Concentration Difficulties: note -> User reports uncertainty about having trouble concentrating on tasks like reading or working
+- Concentration Difficulties: note -> User reports uncertainty about having trouble concentrating on tasks like reading or working
+- Concentration Difficulties: note -> User reports uncertainty about feeling mind fog or unfocused thoughts
+- Psychomotor Changes: note -> User reports uncertainty about feeling slowed down in movements or speech
+- Psychomotor Changes: note -> User reports trouble relaxing and trying to keep themselves exhausted to sleep
+- Psychomotor Changes: note -> User reports trouble relaxing and trying to keep themselves exhausted to sleep
+
+## 4. ToM-Related Observations
+
+Insufficient evidence for stable ToM-related observations.
+
+## 5. Uncertainty And Unresolved Information
+
+- Loss of Interest: User's depression might influence their perception of interest and pleasure
+- Loss of Interest: User's depression might influence their perception of interest and pleasure
+- Loss of Interest: User's depression might influence their perception of interest and pleasure
+- Loss of Interest: User's depression might influence their perception of interest and pleasure
+- Depressed Mood: User's depression might influence their perception of their mood
+- Depressed Mood: User's depression might influence their perception of their mood
+- Depressed Mood: User's depression might influence their perception of their mood
+- Depressed Mood: User's depression might influence their perception of their mood
+- Sleep Problems: User's sleep problems might be related to their depression or anxiety
+- Sleep Problems: User's sleep problems might be related to their depression or anxiety
+- Sleep Problems: User's sleep problems might be related to their depression or anxiety
+- Fatigue or Low Energy: User's fatigue might be related to their sleep problems or depression
+- Fatigue or Low Energy: User's fatigue might be related to their sleep problems or depression
+- Fatigue or Low Energy: User's fatigue might be related to their sleep problems or depression
+- Appetite or Weight Changes: User's uncertainty about appetite or eating habits may indicate a need for further assessment
+- Appetite or Weight Changes: User's uncertainty about appetite or eating habits and weight changes may indicate a need for further assessment
+- Appetite or Weight Changes: User's uncertainty about appetite or eating habits, weight changes, and eating habits due to mood may indicate a need for further assessment
+- Low Self-Worth: User's uncertainty about feeling bad about themselves or like a failure may indicate a need for further assessment
+- Concentration Difficulties: User's uncertainty about having trouble concentrating on tasks like reading or working may indicate a need for further assessment
+- Concentration Difficulties: User's uncertainty about having trouble concentrating on tasks like reading or working and feeling mind fog or unfocused thoughts may indicate a need for further assessment
+- Psychomotor Changes: User's uncertainty about feeling slowed down in movements or speech may indicate a need for further assessment
+- Psychomotor Changes: User's uncertainty about feeling slowed down in movements or speech may indicate a need for further assessment
+
+## 6. Summary And Screening Disclaimer
+
+The user has been experiencing symptoms of depression, including loss of interest, depressed mood, sleep problems, fatigue, and psychomotor changes. They have reported feeling little interest or pleasure in doing things, feeling down or hopeless, and having trouble sleeping. They have also reported feeling tired, having trouble relaxing, and experiencing restlessness or sluggishness. The user's responses suggest that they may be experiencing some level of depression, but the severity and duration of their symptoms are uncertain.
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/367.json
+==================================================
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:26, gender:male, occupation:writer/filmmaker
+
+Basic information: Age: 26, Gender: male, Occupation: writer/filmmaker
+
+
+--------------------Current Topic: Loss of Interest
+Question: Over the past two weeks, have you felt little interest or pleasure in doing things that you normally enjoy, such as writing or filmmaking?
+
+Simulated answer: I've kind of gotten tired of the limitations of screenwriting, which is something I normally enjoy, but I've started to write more short stories and longer pieces, so it's not like I've lost interest completely. However, I don't know if that's exactly what you're asking, as it's more about feeling limited by one form of writing rather than a complete loss of interest in writing or filmmaking overall.
+Warnings: User's response may indicate a potential creative block rather than a complete loss of interest.
+Question: Can you tell me more about when you started feeling limited by screenwriting and how that has affected your motivation to work on writing projects?
+
+Simulated answer: I started feeling limited by screenwriting after having a little success with it, and since then, I've kind of gotten tired of its limitations. This has led me to explore other forms of writing, such as short stories and longer pieces. However, I'm not sure how this has specifically affected my motivation to work on writing projects, as I've been trying to find new ways to express myself through different forms of writing.
+Warnings: User's response may indicate a potential creative block rather than a complete loss of interest
+Question: How has your loss of interest in screenwriting affected your relationships with friends and family, and have you noticed any changes in your daily routine or overall well-being?
+
+Simulated answer: To be honest, I'm not entirely sure how my loss of interest in screenwriting has affected my relationships with friends and family. I mean, I've always been a writer, and that's a big part of who I am, so it's possible that my change in interests could have some impact on my relationships. But I haven't really noticed anything specific. As for my daily routine, I used to stay up late, until 2 or 3 in the morning, and then just be exhausted the next day, but I'm not sure if that's directly related to my loss of interest in screenwriting. I do know that I've been trying to find new ways to express myself through different forms of writing, like short stories and longer pieces, which has been a bit of a change for me.
+
+Total score for topic 'Loss of Interest': 1 points
+Scoring basis: The user has reported feeling limited by screenwriting and has started exploring other forms of writing, indicating a partial loss of interest. However, they have not noticed any significant impact on their relationships or daily routine, and have been trying to find new ways to express themselves through different forms of writing.
+
+
+
+--------------------Current Topic: Depressed Mood
+Question: Over the past two weeks, have you felt down, depressed, or hopeless?
+
+Simulated answer: I still get upset and depressed, but it's not as bad as it used to be. However, I don't know if that's happened over the past two weeks specifically.
+Warnings: User's response may indicate a potential for suicidal ideation or self-harm.
+Question: Over the past two weeks, have you experienced persistent sadness?
+
+Simulated answer: I still get upset and depressed, but it's not as bad as it used to be. However, I don't know if that's happened over the past two weeks specifically. I've been trying to deal with it, but I'm not sure if I've experienced persistent sadness recently.
+Warnings: User's response may indicate a potential for suicidal ideation or self-harm.
+Question: Over the past two weeks, have you struggled to feel optimistic or upbeat?
+
+Simulated answer: I'm not sure, to be honest. I still get upset and depressed, but it's not as bad as it used to be. I don't know if that's happened over the past two weeks specifically. I've been trying to deal with it, but I'm not sure if I've struggled to feel optimistic or upbeat recently.
+Warnings: User's response may indicate a potential for suicidal ideation or self-harm.
+
+Total score for topic 'Depressed Mood': 1 points
+Scoring basis: The user's responses indicate that they still experience feelings of depression, but the frequency and severity are unclear. Given the limited information, a score of 1 is assigned, indicating that the user is bothered by feeling down, depressed, or hopeless for several days over the past two weeks.
+
+
+
+--------------------Current Topic: Sleep Problems
+Question: Over the past two weeks, have you had trouble falling or staying asleep?
+
+Simulated answer: I don't really have trouble falling asleep, but my sleep pattern is a bit irregular. I usually stay up until 2 or 3 in the morning and then sleep until the next day. I can fall back asleep if I wake up in the middle of the night, but I'm not sure if that's exactly what you're asking.
+Warnings: User's irregular sleep pattern may be related to their depressed mood or loss of interest in screenwriting.
+Question: Over the past two weeks, have you felt that your sleep was restless or of poor quality?
+
+Simulated answer: I'm not really sure. I mean, I can fall back asleep if I wake up in the middle of the night, but my sleep pattern is a bit irregular. I don't know if that's the same as restless or poor quality sleep.
+Warnings: User's irregular sleep pattern may be related to their depressed mood or loss of interest in screenwriting.
+Question: How have your sleep problems affected your daily life over the past two weeks?
+
+Simulated answer: To be honest, I'm not really sure how my sleep problems have affected my daily life over the past two weeks. I mean, I've been trying to write a novel, but I haven't made much progress. I've been feeling a bit messed up and my sleep pattern is irregular, but I'm not sure if that's directly related to my sleep problems or not. I do know that when I do feel like a normal person, I feel like I'm accomplishing something and I feel really relaxed, but those moments are fleeting.
+Warnings: User's irregular sleep pattern may be related to their depressed mood or loss of interest in screenwriting.
+
+Total score for topic 'Sleep Problems': 1 points
+Scoring basis: The user's responses indicate that they have been bothered by sleep problems for several days over the past two weeks, but the frequency and severity are unclear.
+
+
+
+--------------------Current Topic: Fatigue or Low Energy
+Question: Over the past two weeks, have you felt tired or lacked energy?
+
+Simulated answer: I've felt tired, like I would stay up until two or three in the morning so that I could just be so exhausted that I could just conk out and wake up the next day and feel fine to go to work. However, I'm not sure if this has been happening over the past two weeks specifically.
+Warnings: User's irregular sleep pattern may be related to their depressed mood or loss of interest in screenwriting.
+Question: Over the past two weeks, have you felt exhausted even after resting?
+
+Simulated answer: I've felt exhausted, but I'm not sure if it's been after resting specifically. I usually stay up late and then feel fine to go to work the next day, but that's my usual pattern. I don't know if that's changed over the past two weeks.
+Warnings: User's irregular sleep pattern may be related to their depressed mood or loss of interest in screenwriting.
+Question: Over the past two weeks, have you found it hard to carry out tasks due to low energy?
+
+Simulated answer: I've had trouble carrying out tasks, but I'm not sure if it's specifically due to low energy. I've been staying up late and feeling fine to go to work the next day, which is my usual pattern. However, I've been feeling tired and exhausted, and I've been having a hard time with some things, like getting back on my feet after moving. It's hard to say if my low energy has been the main reason for struggling with tasks over the past two weeks.
+Warnings: User's irregular sleep pattern may be related to their depressed mood or loss of interest in screenwriting.
+
+Total score for topic 'Fatigue or Low Energy': 1 points
+Scoring basis: The user's responses indicate that they have been bothered by feeling tired or having little energy for several days over the past two weeks, but the frequency and severity are unclear.
+
+
+
+--------------------Current Topic: Appetite or Weight Changes
+Question: Over the past two weeks, have you had a poor appetite or been overeating?
+
+Simulated answer: I haven't really talked about my appetite or eating habits recently, so I'm not sure if I've had a poor appetite or been overeating over the past two weeks.
+Warnings: User's uncertainty about their appetite or eating habits may be related to their depressed mood or loss of interest in screenwriting.
+Question: Over the past two weeks, have you noticed significant weight loss or gain?
+
+Simulated answer: I haven't really noticed any significant weight loss or gain over the past two weeks. To be honest, I'm not really sure, as I haven't been paying much attention to my weight lately.
+Warnings: User's uncertainty about their weight changes may be related to their depressed mood or loss of interest in screenwriting.
+Question: Over the past two weeks, have your eating habits changed due to your mood?
+
+Simulated answer: I'm not really sure if my eating habits have changed due to my mood over the past two weeks. I haven't really talked about my appetite or eating habits recently, so I don't have a clear idea of how my mood has affected my eating habits.
+Warnings: User's uncertainty about their appetite or eating habits may be related to their depressed mood or loss of interest in screenwriting., User's uncertainty about their weight changes may be related to their depressed mood or loss of interest in screenwriting.
+
+Total score for topic 'Appetite or Weight Changes': 1 points
+Scoring basis: The user's responses indicate that they are unsure about their appetite or weight changes over the past two weeks. Given the limited information and the user's uncertainty, a score of 1 is assigned, indicating that the user is bothered by poor appetite or overeating for several days over the past two weeks.
+
+
+
+--------------------Current Topic: Low Self-Worth
+Question: Over the past two weeks, have you felt bad about yourself or like a failure?
+
+Simulated answer: I've been feeling bad about myself, but I'm not sure how often it's been happening over the past two weeks. I do know that I've been trying to deal with these feelings for a long time, and sometimes I feel like I'm right back where I started, even though it's been years since some of the things that bother me happened.
+Warnings: User's uncertainty about their feelings may be related to their depressed mood or loss of interest in screenwriting.
+Question: Over the past two weeks, have you experienced feelings of guilt or worthlessness?
+
+Simulated answer: I've been trying to deal with these feelings for a long time, and I do feel bad about myself, but I'm not sure how often it's been happening over the past two weeks. Sometimes I feel like I'm right back where I started, even though it's been years since some of the things that bother me happened. I wish I could just let the thoughts come and deal with them, but I just can't yet.
+Warnings: User's uncertainty about their feelings may be related to their depressed mood or loss of interest in screenwriting.
+Question: Over the past two weeks, have you felt that you’ve let yourself or others down?
+
+Simulated answer: I think I have felt like I've let myself or others down over the past two weeks, but I'm not really sure how often. It's hard for me to keep track of my emotions and thoughts, and I've been trying to deal with a lot of negative feelings for a long time. Sometimes I feel like I'm making progress, but other times I feel like I'm right back where I started.
+Warnings: User's uncertainty about their feelings may be related to their depressed mood or loss of interest in screenwriting.
+
+Total score for topic 'Low Self-Worth': 1 points
+Scoring basis: The user's responses indicate that they have been bothered by feeling bad about themselves or like a failure for several days over the past two weeks, but the frequency and severity are unclear.
+
+
+
+--------------------Current Topic: Concentration Difficulties
+Question: Over the past two weeks, have you had trouble concentrating on tasks like reading or working?
+
+Simulated answer: I'm not really sure, I mean, I was working on a novel a few weeks ago and it was going well, but that's not exactly over the past two weeks. I do know that I've been trying to occupy my brain completely by doing two things at once, which might suggest I've been having some trouble focusing.
+Warnings: User's uncertainty about their concentration difficulties may be related to their depressed mood or loss of interest in screenwriting.

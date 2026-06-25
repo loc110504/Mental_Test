@@ -13,15 +13,25 @@ if __name__ == "__main__":
     logger.info("Psychological assessment program started.")
 
     data_dir = os.getenv("DATA_DIR", "../data/processed_dev_daic_woz")
+    single_file = os.getenv("SINGLE_FILE", "").strip()
+    sample_id = os.getenv("SAMPLE_ID", "").strip()
+
     if not os.path.exists(data_dir):
         logger.error(f"Data folder {data_dir} does not exist.")
         dialog_print(f"Error: Data folder {data_dir} does not exist.")
         sys.exit(1)
 
-    json_files = [os.path.join(data_dir, f) for f in os.listdir(data_dir) if f.endswith(".json")]
+    if single_file:
+        json_files = [single_file]
+    elif sample_id:
+        json_files = [os.path.join(data_dir, f"{sample_id}.json")]
+    else:
+        json_files = [os.path.join(data_dir, f) for f in os.listdir(data_dir) if f.endswith(".json")]
+
+    json_files = [file_path for file_path in json_files if os.path.exists(file_path)]
     if not json_files:
-        logger.error(f"No JSON files found in folder {data_dir}.")
-        dialog_print(f"Error: No JSON files found in folder {data_dir}.")
+        logger.error(f"No JSON files found for data_dir={data_dir}, single_file={single_file}, sample_id={sample_id}.")
+        dialog_print(f"Error: No JSON files found for data_dir={data_dir}, single_file={single_file}, sample_id={sample_id}.")
         sys.exit(1)
 
     logger.info(f"Found {len(json_files)} JSON files in folder {data_dir}.")
@@ -64,7 +74,7 @@ if __name__ == "__main__":
     else:
         automated = False
 
-    csv_file_path = os.getenv("OUTPUT_CSV", "../evaluation/gemma7b_dev.csv")
+    csv_file_path = os.getenv("OUTPUT_CSV", "../evaluation/llama-33-70b-instruct.csv")
     for json_file in json_files:
         process_single_file(json_file, scoring_standards, chatprompt, selected_scale, mode_choice, csv_file_path, automated)
 
