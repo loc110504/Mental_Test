@@ -3,6 +3,7 @@ import csv
 import json
 from pathlib import Path
 
+PARTICIPANT_ID_COLUMNS = ("Participant_ID", "participant_ID")
 PHQ8_ITEM_COLUMNS = [
     "PHQ8_NoInterest",
     "PHQ8_Depressed",
@@ -22,7 +23,7 @@ def parse_args():
     parser.add_argument(
         "--score-csv",
         required=True,
-        help="CSV file containing Participant_ID, PHQ8_Score, PHQ8_Binary and item columns.",
+        help="CSV file containing participant IDs and optional PHQ-8 label columns.",
     )
     parser.add_argument(
         "--transcript-dir",
@@ -78,17 +79,55 @@ def load_transcript(transcript_path):
     return real_interview
 
 
-def build_sample(row, real_interview):
-    participant_id = str(int(float(row["Participant_ID"])))
-    phq8_scores = {
-        "PHQ8_Score": int(row["PHQ8_Score"]),
-        "PHQ8_Binary": int(row["PHQ8_Binary"]),
-        "items": {column: int(row[column]) for column in PHQ8_ITEM_COLUMNS},
+def get_participant_id_column(columns):
+    for column in PARTICIPANT_ID_COLUMNS:
+        if column in columns:
+            return column
+    raise ValueError(f"Score CSV missing participant ID column. Expected one of: {list(PARTICIPANT_ID_COLUMNS)}")
+
+
+def normalize_score_columns(scores_df):
+    rename_map = {}
+    if "PHQ_Score" in scores_df.columns and "PHQ8_Score" not in scores_df.columns:
+        rename_map["PHQ_Score"] = "PHQ8_Score"
+    if "PHQ_Binary" in scores_df.columns and "PHQ8_Binary" not in scores_df.columns:
+        rename_map["PHQ_Binary"] = "PHQ8_Binary"
+    if rename_map:
+        scores_df = scores_df.rename(columns=rename_map)
+    return scores_df
+
+
+def has_value(row, column):
+    import pandas as pd
+
+    return column in row.index and not pd.isna(row[column])
+
+
+def extract_phq8_scores(row):
+    phq8_scores = {}
+
+    if has_value(row, "PHQ8_Score"):
+        phq8_scores["PHQ8_Score"] = int(row["PHQ8_Score"])
+    if has_value(row, "PHQ8_Binary"):
+        phq8_scores["PHQ8_Binary"] = int(row["PHQ8_Binary"])
+
+    item_scores = {
+        column: int(row[column])
+        for column in PHQ8_ITEM_COLUMNS
+        if has_value(row, column)
     }
+    if item_scores:
+        phq8_scores["items"] = item_scores
+
+    return phq8_scores
+
+
+def build_sample(row, participant_id_column, real_interview):
+    participant_id = str(int(float(row[participant_id_column])))
     return {
         "Participant_ID": participant_id,
         "real_interview": real_interview,
-        "phq8_scores": phq8_scores,
+        "phq8_scores": extract_phq8_scores(row),
     }
 
 
@@ -100,21 +139,14 @@ def process_phq8_dataset(score_csv_path, transcript_dir, output_dir, strict=Fals
     transcript_path = Path(transcript_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
-    scores_df = pd.read_csv(score_csv_path)
-    missing_score_columns = {
-        "Participant_ID",
-        "PHQ8_Score",
-        "PHQ8_Binary",
-        *PHQ8_ITEM_COLUMNS,
-    }.difference(scores_df.columns)
-    if missing_score_columns:
-        raise ValueError(f"Score CSV missing columns: {sorted(missing_score_columns)}")
+    scores_df = normalize_score_columns(pd.read_csv(score_csv_path))
+    participant_id_column = get_participant_id_column(scores_df.columns)
 
     processed_count = 0
     missing_transcripts = []
 
     for _, row in tqdm(scores_df.iterrows(), total=len(scores_df), desc="Processing participants"):
-        participant_id = str(int(float(row["Participant_ID"])))
+        participant_id = str(int(float(row[participant_id_column])))
         transcript_file = transcript_path / f"{participant_id}_TRANSCRIPT.csv"
 
         if not transcript_file.exists():
@@ -134,7 +166,7 @@ def process_phq8_dataset(score_csv_path, transcript_dir, output_dir, strict=Fals
             missing_transcripts.append(participant_id)
             continue
 
-        sample = build_sample(row, real_interview)
+        sample = build_sample(row, participant_id_column, real_interview)
         sample_path = output_path / f"{participant_id}.json"
         with open(sample_path, "w", encoding="utf-8") as handle:
             json.dump(sample, handle, ensure_ascii=False, indent=2)
