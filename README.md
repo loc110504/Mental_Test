@@ -1,14 +1,4 @@
-# [AAAI-2026] AgentMental: An Interactive Multi-Agent Framework for Explainable and Adaptive Mental Health Assessment
-
-
-## Latest News
-🔥[2025.11.07] 🎉Our paper was accepted by **AAAI 2026**!🎉
-
-## Introduction
-
-AgentMental is an interactive multi-agent framework designed for mental health assessment that simulates clinical doctor-patient dialogues to overcome the limitations of static text analysis and insufficiently in-depth user assessment. The framework coordinates four specialized agents—for questioning, adequacy evaluation, scoring, and updating—to implement an adaptive questioning mechanism that actively clarifies vague responses and elicits richer details regarding symptom severity and impact. To maintain contextual coherence and reduce redundancy, the system utilizes a tree-structured memory module that systematically organizes user attributes, topic-level summaries, and turn-level evidence such as symptom duration and frequency. Experimental evaluations on the DAIC-WOZ dataset demonstrate that AgentMental significantly outperforms existing prompt-based and multi-agent baselines, achieving superior performance in metrics such as F1 score and MAE while providing a explainable evaluation process.
-
-![The framework of AgentMental](images/framework.png)
+# Try code AgentMental
 
 ## Quick Start
 
@@ -66,37 +56,4 @@ Convert the split into the JSON format used by the project
     --score-csv /path/to/test_split.csv \
     --transcript-dir data/test_transcripts \
     --output-dir data/processed_test_daic_woz
-```
-
-Your directory structure should look like this:
-```
-AgentMental/
-├── data/
-│   ├── data_download.py
-│   ├── data_process.py
-│   ├── extract_data.py
-│   ├── processed_train_daic_woz
-│   └── ... (other dataset files)
-├── evaluation
-├── scales
-├── src
-├── result.py
-├── requirements.txt
-└── README.md
-```
-
-## Citation
-
-If this work is helpful, please kindly cite as:
-
-```bibtex
-@inproceedings{hu2026agentmental,
-  title={Agentmental: An interactive multi-agent framework for explainable and adaptive mental health assessment},
-  author={Hu, Jinpeng and Wang, Ao and Xie, Qianqian and Li, Zhuo and Ma, Hui and Guo, Dan},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={40},
-  number={37},
-  pages={31050--31058},
-  year={2026}
-}
 ```
