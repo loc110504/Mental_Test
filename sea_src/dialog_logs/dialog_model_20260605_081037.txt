@@ -1,0 +1,117 @@
+Scale: PHQ-8
+Sample: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/302.json
+Mode: Automated test mode
+Result CSV: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/agentmental_single_sample.csv
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/302.json
+==================================================
+
+
+Conversation memory cleared; ready to process current file.
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: age:28, gender:other, occupation:teacher
+
+
+--------------------Current Topic: Loss of Interest
+Question: Sorry, I cannot generate a question at the moment.
+
+Simulated answer: I still care about music, but there have been a few days when it was harder to feel motivated.
+Necessity score == 0, stop questioning.
+
+Total score for topic 'Loss of Interest': 0 points
+
+
+--------------------Current Topic: Depressed Mood
+Question: Sorry, I cannot generate a question at the moment.
+
+Simulated answer: I have felt down on a few days, mostly when I think about work and where I am in life.
+Necessity score == 0, stop questioning.
+
+Total score for topic 'Depressed Mood': 0 points
+
+
+--------------------Current Topic: Sleep Problems
+Question: Sorry, I cannot generate a question at the moment.
+
+Simulated answer: My sleep has been mostly normal.
+Necessity score == 0, stop questioning.
+
+Total score for topic 'Sleep Problems': 0 points
+
+
+--------------------Current Topic: Fatigue or Low Energy
+Question: Sorry, I cannot generate a question at the moment.
+
+Simulated answer: I have felt tired on several days, but I can still get through what I need to do.
+Necessity score == 0, stop questioning.
+
+Total score for topic 'Fatigue or Low Energy': 0 points
+
+
+--------------------Current Topic: Appetite or Weight Changes
+Question: Sorry, I cannot generate a question at the moment.
+
+Simulated answer: My appetite has been about the same.
+Necessity score == 0, stop questioning.
+
+Total score for topic 'Appetite or Weight Changes': 0 points
+
+
+--------------------Current Topic: Low Self-Worth
+Question: Sorry, I cannot generate a question at the moment.
+
+Simulated answer: I have been hard on myself on a few days, especially about career progress.
+Necessity score == 0, stop questioning.
+
+Total score for topic 'Low Self-Worth': 0 points
+
+
+--------------------Current Topic: Concentration Difficulties
+Question: Sorry, I cannot generate a question at the moment.
+
+Simulated answer: My concentration has been mostly fine.
+Necessity score == 0, stop questioning.
+
+Total score for topic 'Concentration Difficulties': 0 points
+
+
+--------------------Current Topic: Psychomotor Changes
+Question: Sorry, I cannot generate a question at the moment.
+
+Simulated answer: I have not really noticed moving slower or feeling unusually restless.
+Necessity score == 0, stop questioning.
+
+Total score for topic 'Psychomotor Changes': 0 points
+
+No topic scores were adjusted.
+
+Number of Q&As in this session: 8
+Assessment results saved to /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/agentmental_single_sample.csv
+
+Automated test completed. Psychological screening report:
+
+# Psychological Scale Assessment Report
+
+## Assessment Scale: PHQ-8
+
+## Score Table
+
+|   No. | Item                       |   Initial Score |   Final Score |
+|------:|:---------------------------|----------------:|--------------:|
+|     1 | Loss of Interest           |               0 |             0 |
+|     2 | Depressed Mood             |               0 |             0 |
+|     3 | Sleep Problems             |               0 |             0 |
+|     4 | Fatigue or Low Energy      |               0 |             0 |
+|     5 | Appetite or Weight Changes |               0 |             0 |
+|     6 | Low Self-Worth             |               0 |             0 |
+|     7 | Concentration Difficulties |               0 |             0 |
+|     8 | Psychomotor Changes        |               0 |             0 |
+|       | Total Score                |                 |             0 |
+|       | Symptom Level              |                 |             0 |
+
+## Summary and Recommendations
+
+
+

@@ -1,0 +1,15 @@
+Scale: PHQ-8
+Sample: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/389.json
+Mode: Automated test mode
+Result CSV: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/evaluation/agentmental_single_sample.csv
+
+==================================================
+Starting to process file: /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/389.json
+==================================================
+
+
+Conversation memory cleared; ready to process current file.
+
+Question: Hello, I am your dedicated psychological assistant. I will conduct an interview with you based on PHQ-8 to assess the severity of related symptoms. Please note that this is only a preliminary screening and cannot replace formal psychiatric diagnosis and treatment. First, for the accuracy of the assessment, I would like to collect your basic information: age, gender, occupation. If you're ready, let's begin.
+Simulated answer: Sorry, I cannot answer this question at the moment.
+Error processing file /mnt/c/Users/loc11/OneDrive - VNU-HCMUS/QBAF/AgentMental/data/processed_dev_daic_woz/389.json; check logs for details.

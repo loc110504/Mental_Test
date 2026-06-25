@@ -3,7 +3,7 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SRC_DIR="$REPO_ROOT/src"
+APP_DIR="${APP_DIR:-$REPO_ROOT/sea_src}"
 DATA_DIR="${1:-$REPO_ROOT/data/processed_dev_daic_woz}"
 CSV_FILE="${2:-$REPO_ROOT/evaluation/agentmental_dev_full.csv}"
 
@@ -26,7 +26,19 @@ if [ ! -d "$DATA_DIR" ]; then
   exit 1
 fi
 
-cd "$SRC_DIR"
+if [ ! -d "$APP_DIR" ]; then
+  echo "Application directory not found: $APP_DIR" >&2
+  exit 1
+fi
+
+if [ ! -f "$APP_DIR/main.py" ]; then
+  echo "main.py not found in application directory: $APP_DIR" >&2
+  exit 1
+fi
+
+mkdir -p "$(dirname "$CSV_FILE")"
+
+cd "$APP_DIR"
 
 shopt -s nullglob
 files=("$DATA_DIR"/*.json)
@@ -37,6 +49,7 @@ if [ "${#files[@]}" -eq 0 ]; then
 fi
 
 echo "Running original AgentMental pipeline on ${#files[@]} dev samples"
+echo "App dir: $APP_DIR"
 echo "Data dir: $DATA_DIR"
 echo "Result CSV: $CSV_FILE"
 echo "LLM provider: $LLM_PROVIDER"

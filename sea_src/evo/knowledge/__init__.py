@@ -1,0 +1,2 @@
+"""Static clinical knowledge loaders."""
+
