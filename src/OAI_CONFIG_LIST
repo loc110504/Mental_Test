@@ -1,10 +1,10 @@
 [
     {
-        "model": "qwen2.5:latest",
+        "model": "qwen3:30b",
         "api_key": "ollama",
         "base_url": "http://localhost:11434/v1",
         "api_type": "openai",
-        "tags": ["qwen2.5:latest", "ollama"],
+        "tags": ["qwen3:30b", "ollama"],
         "price": [0, 0]
     },
     {

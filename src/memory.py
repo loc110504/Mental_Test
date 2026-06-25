@@ -3,12 +3,9 @@ import uuid
 from openai import OpenAI
 import json
 import logging
-import os
+from config import get_api_runtime_config
 
 logger = logging.getLogger(__name__)
-base_url = os.getenv("API_BASE_URL", "your_api_base_url_here")
-api_key = os.getenv("API_KEY", "your_api_key_here")
-model_name = os.getenv("API_MODEL", "qwen2.5-72b")
 
 class MemoryGraph:
     def __init__(self, user_identification):
@@ -16,10 +13,10 @@ class MemoryGraph:
         self.user_node = "User"
         self.graph.add_node(self.user_node, type="User", info=user_identification)
         logger.info(f"MemoryGraph initialized for user: {user_identification}")
-        
+        self.runtime_config = get_api_runtime_config()
         self.client = OpenAI(
-            base_url=base_url, 
-            api_key=api_key
+            base_url=self.runtime_config["base_url"],
+            api_key=self.runtime_config["api_key"]
         )
 
     def add_topic(self, topic_name):
@@ -77,7 +74,7 @@ Output:
 """
         try:
             completion = self.client.chat.completions.create(
-                model=model_name,
+                model=self.runtime_config["model_name"],
                 messages=[
                     {"role": "system", "content": "You are a psychological assessment assistant. Extract key information strictly as instructed and return JSON."},
                     {"role": "user", "content": prompt}
@@ -211,7 +208,7 @@ Provide a strict JSON response with a single key "results", which is a list of o
 """
         try:
             completion = self.client.chat.completions.create(
-                model=model_name,
+                model=self.runtime_config["model_name"],
                 messages=[
                     {"role": "system", "content": "You are a senior clinical psychologist performing a file review. Output your findings in the specified JSON format only."},
                     {"role": "user", "content": holistic_reassessment_prompt}

@@ -1,24 +1,18 @@
 import re
 import json
-import os
 import sys
 import contextlib
 import logging
-from pathlib import Path
 import pandas as pd
-from dotenv import load_dotenv
+from config import get_api_runtime_config
 from data_load import load_scoring_standards
 from logging_setup import dialog_print
 
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
-
 logger = logging.getLogger(__name__)
-base_url = os.getenv("API_BASE_URL", "https://api.deepseek.ai/v1")
-api_key = os.getenv("API_KEY", "your_api_key_here")
-model_name = os.getenv("API_MODEL", "deepseek-r1-32b")
 
 
 def generate_mock_response(question, topic, identification, real_interview, scale_scores, scoring_standard=None, current_topic_history=None, depth=0, clear_memory=False, scale_name="PHQ-8"):
+    runtime_config = get_api_runtime_config()
     interview_history = ""
     for para in real_interview:
         role = para.get("roleName", "Unknown role")
@@ -55,8 +49,8 @@ Limit your response to 50 words.
     try:
         from openai import OpenAI
         client = OpenAI(
-            base_url=base_url,
-            api_key=api_key
+            base_url=runtime_config["base_url"],
+            api_key=runtime_config["api_key"]
         )
         system_prompt = f"""You are speaking with a psychological assistant, and you are the client in this conversation with the following interview dialogue:
 {interview_history}
@@ -65,7 +59,7 @@ You should follow the provided information to act as a client in the conversatio
 Your response should ONLY include what the Client should say, in a natural, first-person tone.
 """ 
         completion = client.chat.completions.create(
-            model=model_name,
+            model=runtime_config["model_name"],
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
