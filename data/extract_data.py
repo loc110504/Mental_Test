@@ -1,129 +1,189 @@
-import os
+import argparse
 import csv
 import re
-import zipfile
 import shutil
+import zipfile
+from pathlib import Path
 
-# Configuration parameters
-TEST_CSV = ""  # dataset CSV filename
-SOURCE_DIR = ""  # Directory containing ZIP archives
-TARGET_DIR = ""  # Extraction destination
-TRANSCRIPT_DIR = ""  # Directory for transcript files
 
-def normalize_zip_name(participant_id):
-    spaced_name = f"{participant_id} P.zip"
-    underscored_name = f"{participant_id}_P.zip"
-    dotted_name = f"{participant_id}. P.zip"
-    lowercase_name = f"{participant_id}_p.zip"
-    
-    return [spaced_name, underscored_name, dotted_name, lowercase_name]
+TRANSCRIPT_PATTERNS = (
+    "{participant_id}_TRANSCRIPT.csv",
+    "{participant_id} TRANSCRIPT.csv",
+    "{participant_id}_transcript.csv",
+)
 
-def find_matching_zip(participant_id):
-    possible_names = normalize_zip_name(participant_id)
-    
-    for filename in possible_names:
-        filepath = os.path.join(SOURCE_DIR, filename)
-        if os.path.exists(filepath):
-            return filepath
 
-    for filename in os.listdir(SOURCE_DIR):
-        if filename.lower().endswith('.zip'):
-            match = re.search(r'(\d{3})', filename)
-            if match:
-                file_id = int(match.group(1))
-                if file_id == participant_id:
-                    return os.path.join(SOURCE_DIR, filename)
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description=(
+            "Extract participant archives for a DAIC-WOZ split and collect "
+            "transcript CSV files into a single directory."
+        )
+    )
+    parser.add_argument(
+        "--split-csv",
+        required=True,
+        help="CSV file containing a Participant_ID column or participant IDs in the first column.",
+    )
+    parser.add_argument(
+        "--source-dir",
+        required=True,
+        help="Directory containing participant zip archives.",
+    )
+    parser.add_argument(
+        "--extract-dir",
+        default="data/extracted_daic_woz",
+        help="Directory where archives will be extracted.",
+    )
+    parser.add_argument(
+        "--transcript-dir",
+        default="data/daic_woz_transcripts",
+        help="Directory where normalized transcript CSV files will be copied.",
+    )
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Re-extract archives and overwrite copied transcript files.",
+    )
+    return parser.parse_args()
+
+
+def load_participant_ids(csv_path):
+    participant_ids = []
+    with open(csv_path, "r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if reader.fieldnames and "Participant_ID" in reader.fieldnames:
+            for row in reader:
+                if row.get("Participant_ID"):
+                    participant_ids.append(int(float(row["Participant_ID"])))
+            return participant_ids
+
+    with open(csv_path, "r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.reader(handle)
+        next(reader, None)
+        for row in reader:
+            if row and row[0].strip():
+                participant_ids.append(int(float(row[0])))
+    return participant_ids
+
+
+def candidate_archive_names(participant_id):
+    return [
+        f"{participant_id}_P.zip",
+        f"{participant_id} P.zip",
+        f"{participant_id}. P.zip",
+        f"{participant_id}_p.zip",
+        f"{participant_id}.zip",
+    ]
+
+
+def find_archive(source_dir, participant_id):
+    source_path = Path(source_dir)
+    for candidate in candidate_archive_names(participant_id):
+        candidate_path = source_path / candidate
+        if candidate_path.exists():
+            return candidate_path
+
+    pattern = re.compile(rf"(^|[^0-9]){participant_id}([^0-9]|$)")
+    for archive_path in source_path.glob("*.zip"):
+        if pattern.search(archive_path.name):
+            return archive_path
     return None
 
-def extract_zip(zip_path, target_dir):
-    try:
-        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-            zip_ref.extractall(target_dir)
-        print(f"✓ Extraction succeeded: {os.path.basename(zip_path)}")
-        return True
-    except Exception as e:
-        print(f"✗ Extraction failed: {os.path.basename(zip_path)} - {str(e)}")
-        return False
 
-def copy_transcript_files(participant_id, source_dir, target_dir):
-    os.makedirs(target_dir, exist_ok=True)
-    patterns = [
-        f"{participant_id}_TRANSCRIPT.csv",
-        f"{participant_id} TRANSCRIPT.csv",
-        f"{participant_id}_TRANSCRIPT.CSV",
-        f"{participant_id}_transcript.csv"
-    ]
-    
-    found = False
-    for root, dirs, files in os.walk(source_dir):
-        for file in files:
-            if any(file.lower() == pattern.lower() for pattern in patterns):
-                src_path = os.path.join(root, file)
-                dest_path = os.path.join(target_dir, file)
+def extract_archive(archive_path, extract_dir, participant_id, overwrite=False):
+    participant_dir = Path(extract_dir) / str(participant_id)
+    if participant_dir.exists() and not overwrite:
+        print(f"skip  extract {archive_path.name}")
+        return participant_dir
 
-                shutil.copy2(src_path, dest_path)
-                print(f"✓ Copied transcript: {file} → {os.path.basename(target_dir)}")
-                found = True
-                break
-    if not found:
-        print(f"✗ Transcript not found for participant {participant_id}")
-    return found
+    if participant_dir.exists():
+        shutil.rmtree(participant_dir)
+    participant_dir.mkdir(parents=True, exist_ok=True)
 
-def process_test_set():
-    os.makedirs(TARGET_DIR, exist_ok=True)
-    os.makedirs(TRANSCRIPT_DIR, exist_ok=True)
-    
-    participant_ids = []
-    try:
-        with open(TEST_CSV, 'r') as csvfile:
-            reader = csv.reader(csvfile)
-            next(reader)
-            for row in reader:
-                if row:  
-                    participant_ids.append(int(row[0]))
-        print(f"Loaded {len(participant_ids)} participant IDs from CSV")
-    except Exception as e:
-        print(f"Failed to read CSV file: {str(e)}")
-        return
+    with zipfile.ZipFile(archive_path, "r") as zip_ref:
+        zip_ref.extractall(participant_dir)
+    print(f"done  extract {archive_path.name}")
+    return participant_dir
 
-    success_count = 0
+
+def transcript_names(participant_id):
+    return [pattern.format(participant_id=participant_id).lower() for pattern in TRANSCRIPT_PATTERNS]
+
+
+def find_transcript_file(extracted_dir, participant_id):
+    expected_names = set(transcript_names(participant_id))
+    for file_path in Path(extracted_dir).rglob("*"):
+        if file_path.is_file() and file_path.name.lower() in expected_names:
+            return file_path
+    return None
+
+
+def copy_transcript(transcript_path, transcript_dir, participant_id, overwrite=False):
+    destination = Path(transcript_dir) / f"{participant_id}_TRANSCRIPT.csv"
+    if destination.exists() and not overwrite:
+        print(f"skip  transcript {destination.name}")
+        return destination
+
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(transcript_path, destination)
+    print(f"done  transcript {destination.name}")
+    return destination
+
+
+def main():
+    args = parse_args()
+    participant_ids = load_participant_ids(args.split_csv)
+    if not participant_ids:
+        raise SystemExit("No participant IDs found in split CSV.")
+
+    extract_dir = Path(args.extract_dir)
+    transcript_dir = Path(args.transcript_dir)
+    extract_dir.mkdir(parents=True, exist_ok=True)
+    transcript_dir.mkdir(parents=True, exist_ok=True)
+
+    extracted_count = 0
     transcript_count = 0
-    missing_zip_count = 0
-    missing_transcript_count = 0
-    
-    for pid in participant_ids:
-        print(f"\nProcessing participant ID: {pid}")
-        zip_path = find_matching_zip(pid)
-        
-        if zip_path:
-            if extract_zip(zip_path, TARGET_DIR):
-                success_count += 1
+    missing_archives = []
+    missing_transcripts = []
 
-                if copy_transcript_files(pid, TARGET_DIR, TRANSCRIPT_DIR):
-                    transcript_count += 1
-                else:
-                    missing_transcript_count += 1
-            else:
-                missing_zip_count += 1
-        else:
-            print(f"✗ ZIP archive not found for participant {pid}")
-            missing_zip_count += 1
+    for participant_id in participant_ids:
+        archive_path = find_archive(args.source_dir, participant_id)
+        if archive_path is None:
+            print(f"miss  archive for participant {participant_id}")
+            missing_archives.append(participant_id)
+            continue
 
-    print("\n" + "=" * 50)
-    print(f"Processing complete! Summary:")
-    print(f"Total participants: {len(participant_ids)}")
-    print(f"Successfully extracted: {success_count}")
-    print(f"Transcripts found: {transcript_count}")
-    print(f"Missing ZIP archives: {missing_zip_count}")
-    print(f"Missing transcripts: {missing_transcript_count}")
-    print(f"Extraction directory: {os.path.abspath(TARGET_DIR)}")
-    print(f"Transcript directory: {os.path.abspath(TRANSCRIPT_DIR)}")
+        participant_extract_dir = extract_archive(
+            archive_path,
+            extract_dir,
+            participant_id,
+            overwrite=args.overwrite,
+        )
+        extracted_count += 1
 
-    try:
-        shutil.copy2(TEST_CSV, TRANSCRIPT_DIR)
-        print(f"Copied CSV file to transcript directory")
-    except Exception as e:
-        print(f"Failed to copy CSV file: {str(e)}")
+        transcript_path = find_transcript_file(participant_extract_dir, participant_id)
+        if transcript_path is None:
+            print(f"miss  transcript for participant {participant_id}")
+            missing_transcripts.append(participant_id)
+            continue
+
+        copy_transcript(
+            transcript_path,
+            transcript_dir,
+            participant_id,
+            overwrite=args.overwrite,
+        )
+        transcript_count += 1
+
+    print(f"Participants in split: {len(participant_ids)}")
+    print(f"Archives extracted: {extracted_count}")
+    print(f"Transcripts copied: {transcript_count}")
+    print(f"Missing archives: {len(missing_archives)}")
+    print(f"Missing transcripts: {len(missing_transcripts)}")
+    print(f"Extract dir: {extract_dir.resolve()}")
+    print(f"Transcript dir: {transcript_dir.resolve()}")
+
 
 if __name__ == "__main__":
-    process_test_set()
+    main()

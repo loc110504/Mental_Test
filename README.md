@@ -41,15 +41,31 @@ Run
 
 ## Data
 
-Download the dataset
+Download the dataset from an authorized page or a manifest of direct links
 ```bash
-~$ python data_download.py
+~$ python data/data_download.py --url "<AUTHORIZED_DATASET_PAGE_URL>"
 ```
 
-Data processing
+or
 ```bash
-~$ python extract_data.py
-~$ python data_process.py
+~$ python data/data_download.py --manifest data/download_urls.txt
+```
+
+Extract transcripts for a split after the archives are downloaded
+```bash
+~$ python data/extract_data.py \
+    --split-csv /path/to/test_split.csv \
+    --source-dir data/daic_woz_dataset \
+    --extract-dir data/extracted_test \
+    --transcript-dir data/test_transcripts
+```
+
+Convert the split into the JSON format used by the project
+```bash
+~$ python data/data_process.py \
+    --score-csv /path/to/test_split.csv \
+    --transcript-dir data/test_transcripts \
+    --output-dir data/processed_test_daic_woz
 ```
 
 Your directory structure should look like this:
@@ -84,4 +100,3 @@ If this work is helpful, please kindly cite as:
   year={2026}
 }
 ```
-

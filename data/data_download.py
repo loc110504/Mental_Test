@@ -1,145 +1,194 @@
-import requests
-from bs4 import BeautifulSoup
+import argparse
+import concurrent.futures
 import os
 import time
-import concurrent.futures
-from urllib.parse import urljoin
-
-URL = "Dataset URL HERE"  # Please obtain the url for the dataset through authorization
-
-OUTPUT_DIR = "daic_woz_dataset"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-MAX_WORKERS = 10
-
-total_files = 0
-downloaded_count = 0
-failed_count = 0
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import urljoin, urlparse
+from urllib.request import Request, urlopen
 
 
-def download_file(url, filename):
-    global downloaded_count, failed_count
+DEFAULT_EXTENSIONS = {
+    ".zip",
+    ".tar",
+    ".gz",
+    ".7z",
+    ".rar",
+    ".csv",
+    ".txt",
+    ".json",
+    ".xlsx",
+}
+DEFAULT_USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+)
 
-    filepath = os.path.join(OUTPUT_DIR, filename)
 
-    if os.path.exists(filepath):
-        print(f"✓ File exists: {filename}")
-        downloaded_count += 1
+class LinkParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() != "a":
+            return
+        attr_map = dict(attrs)
+        href = attr_map.get("href")
+        if href:
+            self.links.append(href)
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description=(
+            "Download dataset files from an authorized index page or from a "
+            "manifest file containing one URL per line."
+        )
+    )
+    parser.add_argument(
+        "--url",
+        help="Authorized dataset page containing downloadable links.",
+    )
+    parser.add_argument(
+        "--manifest",
+        help="Text file with one direct download URL per line.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="data/daic_woz_dataset",
+        help="Directory where downloaded files will be stored.",
+    )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=4,
+        help="Number of concurrent downloads.",
+    )
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Re-download files even if they already exist.",
+    )
+    parser.add_argument(
+        "--timeout",
+        type=int,
+        default=60,
+        help="Timeout in seconds for HTTP requests.",
+    )
+    return parser.parse_args()
+
+
+def build_request(url):
+    return Request(url, headers={"User-Agent": DEFAULT_USER_AGENT})
+
+
+def read_manifest(manifest_path):
+    urls = []
+    with open(manifest_path, "r", encoding="utf-8") as handle:
+        for line in handle:
+            stripped = line.strip()
+            if stripped and not stripped.startswith("#"):
+                urls.append(stripped)
+    return urls
+
+
+def discover_links(index_url, timeout):
+    with urlopen(build_request(index_url), timeout=timeout) as response:
+        html = response.read().decode("utf-8", errors="ignore")
+
+    parser = LinkParser()
+    parser.feed(html)
+
+    discovered = []
+    for href in parser.links:
+        full_url = urljoin(index_url, href)
+        parsed = urlparse(full_url)
+        suffix = Path(parsed.path).suffix.lower()
+        if suffix in DEFAULT_EXTENSIONS:
+            discovered.append(full_url)
+
+    unique_links = sorted(set(discovered))
+    return unique_links
+
+
+def filename_from_url(file_url, index):
+    path_name = Path(urlparse(file_url).path).name
+    if path_name:
+        return path_name
+    return f"dataset_file_{index:03d}.dat"
+
+
+def download_file(file_url, destination_dir, overwrite=False, timeout=60):
+    file_name = Path(destination_dir, filename_from_url(file_url, 0))
+    if file_name.exists() and not overwrite:
+        print(f"skip  {file_name.name}")
         return True
 
-    print(f"↓ Downloading: {filename}")
     try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-        }
+        start_time = time.time()
+        with urlopen(build_request(file_url), timeout=timeout) as response:
+            total_size = int(response.headers.get("Content-Length", "0") or 0)
+            with open(file_name, "wb") as handle:
+                downloaded = 0
+                while True:
+                    chunk = response.read(1024 * 64)
+                    if not chunk:
+                        break
+                    handle.write(chunk)
+                    downloaded += len(chunk)
 
-        with requests.get(url, stream=True, headers=headers, timeout=30) as r:
-            r.raise_for_status()
-            total_size = int(r.headers.get('content-length', 0))
-            downloaded = 0
-            start_time = time.time()
-
-            with open(filepath, 'wb') as f:
-                for chunk in r.iter_content(chunk_size=8192):
-                    if chunk:
-                        downloaded += len(chunk)
-                        f.write(chunk)
-                        if total_size > 0:
-                            progress = int(50 * downloaded / total_size)
-                            speed = downloaded / (time.time() - start_time) / 1024
-                            print(f"\r[{filename[:20]:<20}] [{'=' * progress}{' ' * (50 - progress)}] "
-                                  f"{downloaded / 1024 / 1024:.1f}MB/{total_size / 1024 / 1024:.1f}MB "
-                                  f"@ {speed:.1f}KB/s", end='')
-
-        downloaded_count += 1
-        print(f"\n✓ Download complete: {filename} (Size: {total_size / 1024 / 1024:.1f}MB)")
+        elapsed = max(time.time() - start_time, 0.001)
+        size_mb = downloaded / 1024 / 1024
+        speed_mb = size_mb / elapsed
+        if total_size > 0:
+            print(f"done  {file_name.name} {size_mb:.1f}MB @ {speed_mb:.2f}MB/s")
+        else:
+            print(f"done  {file_name.name} {size_mb:.1f}MB")
         return True
-
-    except Exception as e:
-        failed_count += 1
-        print(f"\n✗ Download failed: {filename} - {str(e)}")
-        if os.path.exists(filepath):
-            os.remove(filepath)
+    except Exception as exc:
+        if file_name.exists():
+            file_name.unlink()
+        print(f"fail  {file_name.name}: {exc}")
         return False
 
 
-def get_download_links():
-    print(f"Parsing website: {URL}")
-
-    try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-        }
-        response = requests.get(URL, headers=headers, timeout=10)
-        response.raise_for_status()
-    except Exception as e:
-        print(f"Unable to access website: {str(e)}")
-        return []
-
-    soup = BeautifulSoup(response.text, 'html.parser')
-
-    download_links = []
-    for link in soup.find_all('a'):
-        href = link.get('href', '')
-        text = link.text.strip()
-
-        if (href.endswith(('.zip', '.tar', '.gz', '.7z', '.rar', '.csv', '.txt', '.json', '.xlsx')) or
-                "download" in href.lower() or
-                "dataset" in text.lower() or
-                "data" in text.lower()):
-
-            full_url = urljoin(URL, href)
-            filename = os.path.basename(full_url) or f"dataset_file_{len(download_links) + 1}"
-
-            if not os.path.splitext(filename)[1]:
-                if "zip" in text.lower():
-                    filename += ".zip"
-                elif "tar" in text.lower():
-                    filename += ".tar"
-                elif "csv" in text.lower():
-                    filename += ".csv"
-                else:
-                    filename += ".dat"
-
-            download_links.append((full_url, filename))
-
-    return download_links
-
-
 def main():
-    global total_files
+    args = parse_args()
 
-    download_links = get_download_links()
+    if not args.url and not args.manifest:
+        raise SystemExit("Provide either --url or --manifest.")
+
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    if args.manifest:
+        download_links = read_manifest(args.manifest)
+    else:
+        download_links = discover_links(args.url, args.timeout)
+
     if not download_links:
-        print("No download links found, please check website structure")
-        return
+        raise SystemExit("No downloadable links found.")
 
-    total_files = len(download_links)
-    print(f"Found {total_files} files to download")
-    print("=" * 70)
+    print(f"Found {len(download_links)} files")
+    success_count = 0
 
-    start_time = time.time()
-    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        future_to_file = {executor.submit(download_file, url, filename): (url, filename)
-                          for url, filename in download_links}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(args.workers, 1)) as executor:
+        futures = [
+            executor.submit(
+                download_file,
+                link,
+                output_dir,
+                args.overwrite,
+                args.timeout,
+            )
+            for link in download_links
+        ]
+        for future in concurrent.futures.as_completed(futures):
+            if future.result():
+                success_count += 1
 
-        for future in concurrent.futures.as_completed(future_to_file):
-            url, filename = future_to_file[future]
-            try:
-                future.result()
-            except Exception as e:
-                print(f"File download error: {filename} - {str(e)}")
-
-    total_time = time.time() - start_time
-
-    print("\n" + "=" * 70)
-    print("Download complete! Statistics:")
-    print(f"Total files: {total_files}")
-    print(f"Successful downloads: {downloaded_count}")
-    print(f"Failed downloads: {failed_count}")
-    print(f"Total time: {total_time:.1f} seconds")
-    print(f"Average speed: {downloaded_count / total_time:.2f} files/second" if downloaded_count > 0 else "")
-    print("Files saved in:", os.path.abspath(OUTPUT_DIR))
+    print(f"Downloaded {success_count}/{len(download_links)} files to {output_dir.resolve()}")
 
 
 if __name__ == "__main__":
